@@ -29,10 +29,16 @@ def getListTank():
                         listTank.append(linkTank)
     return listTank
 
-def getTankInfo(tr_tag,tag):
+def getTankInfoLink(tr_tag,tag):
     res = ""
     if tag.lower() in tr_tag.text.lower():
         res = tr_tag.find_next_sibling('td').find('a').text
+    return res
+
+def getTankInfo(tr_tag,tag):
+    res = ""
+    if tag.lower() in tr_tag.text.lower():
+        res = tr_tag.find_next_sibling('td').text
     return res
 
 def getTankInfoTwoTag(tr_tag,tag,tag1):
@@ -50,10 +56,14 @@ def getTank(linkTank):
         pageStuff = soupList.find("table",class_="infobox vcard")
         tr_tags = pageStuff.find_all('th',class_="infobox-label")
         for tr_tag in tr_tags:
-            typeTank = getTankInfo(tr_tag,"Type")
+            typeTank = getTankInfoLink(tr_tag,"Type")
             originTank = getTankInfoTwoTag(tr_tag,"place","origin")
-            print(typeTank)
-            print(originTank)
+            crew = getTankInfo(tr_tag,"Crew")
+            length = getTankInfo(tr_tag,"length")
+            width = getTankInfo(tr_tag,"Width")
+            height = getTankInfo(tr_tag,"Height")
+            produced = getTankInfo(tr_tag,"produced")
+            
 
 
 #listTank = getListTank()
