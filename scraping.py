@@ -29,4 +29,35 @@ def getListTank():
                         listTank.append(linkTank)
     return listTank
 
-getListTank()
+def getTankInfo(tr_tag,tag):
+    res = ""
+    if tag.lower() in tr_tag.text.lower():
+        res = tr_tag.find_next_sibling('td').find('a').text
+    return res
+
+def getTankInfoTwoTag(tr_tag,tag,tag1):
+    res = ""
+    if tag.lower() in tr_tag.text.lower() or tag1.lower() in tr_tag.text.lower():
+        res = tr_tag.find_next_sibling('td').find('a').text
+    return res
+
+def getTank(linkTank):
+    response = requests.get(linkTank)
+    if response.status_code == 200:
+        typeTank = ""
+        print("Access to the Tank's page")
+        soupList = BeautifulSoup(response.text, 'html.parser')
+        pageStuff = soupList.find("table",class_="infobox vcard")
+        tr_tags = pageStuff.find_all('th',class_="infobox-label")
+        for tr_tag in tr_tags:
+            typeTank = getTankInfo(tr_tag,"Type")
+            originTank = getTankInfoTwoTag(tr_tag,"place","origin")
+            print(typeTank)
+            print(originTank)
+
+
+#listTank = getListTank()
+#for tankPage in listTank:
+    #getTank(tankPage)
+getTank("https://en.wikipedia.org/wiki/T-90")
+
