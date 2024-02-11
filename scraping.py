@@ -9,6 +9,8 @@ import re
 from bs4 import BeautifulSoup
 
 def getListTank():
+    listTank = []
+    genericLink = "https://en.wikipedia.org/"
     linkList = "https://en.wikipedia.org/wiki/List_of_Russo-Ukrainian_War_military_equipment"
     response = requests.get(linkList)
     if response.status_code == 200:
@@ -23,6 +25,8 @@ def getListTank():
                     li_tags = next_ul.find_all('li')
                     for li_tag in li_tags:
                         linkTank = li_tag.find('a')
-                        print(linkTank)
+                        linkTank = genericLink+ str(linkTank['href'])
+                        listTank.append(linkTank)
+    return listTank
 
 getListTank()
