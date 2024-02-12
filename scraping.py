@@ -29,41 +29,30 @@ def getListTank():
                         listTank.append(linkTank)
     return listTank
 
-def getTankInfoLink(tr_tag,tag):
-    res = ""
-    if tag.lower() in tr_tag.text.lower():
-        res = tr_tag.find_next_sibling('td').find('a').text
-    return res
-
 def getTankInfo(tr_tag,tag):
     res = ""
     if tag.lower() in tr_tag.text.lower():
-        res = tr_tag.find_next_sibling('td').text
-    return res
-
-def getTankInfoTwoTag(tr_tag,tag,tag1):
-    res = ""
-    if tag.lower() in tr_tag.text.lower() or tag1.lower() in tr_tag.text.lower():
-        res = tr_tag.find_next_sibling('td').find('a').text
+        if tr_tag.find_next_sibling('td').find('a'):
+            res = tr_tag.find_next_sibling('td').find('a').text
+        elif tr_tag.find_next_sibling('td'):
+            res = tr_tag.find_next_sibling('td').text
     return res
 
 def getTank(linkTank):
     response = requests.get(linkTank)
     if response.status_code == 200:
-        typeTank = ""
         print("Access to the Tank's page")
         soupList = BeautifulSoup(response.text, 'html.parser')
         pageStuff = soupList.find("table",class_="infobox vcard")
         tr_tags = pageStuff.find_all('th',class_="infobox-label")
         for tr_tag in tr_tags:
-            typeTank = getTankInfoLink(tr_tag,"Type")
-            originTank = getTankInfoTwoTag(tr_tag,"place","origin")
+            typeTank = getTankInfo(tr_tag,"Type")
+            originTank = getTankInfo(tr_tag,"origin")
             crew = getTankInfo(tr_tag,"Crew")
             length = getTankInfo(tr_tag,"length")
             width = getTankInfo(tr_tag,"Width")
             height = getTankInfo(tr_tag,"Height")
             produced = getTankInfo(tr_tag,"produced")
-            
 
 
 #listTank = getListTank()
