@@ -31,11 +31,22 @@ def getListTank():
 
 def getTankInfo(tr_tag,tag):
     res = ""
-    if tag.lower() in tr_tag.text.lower():
+    if (tag.lower() == tr_tag.text.lower()) or (tag.lower() in tr_tag.text.lower()) :
         if tr_tag.find_next_sibling('td').find('a'):
-            res = tr_tag.find_next_sibling('td').find('a').text
+            listElement = tr_tag.find_next_sibling('td').find_all('a')
+            res = []
+            for elementLI in listElement:
+                res.append(elementLI.text)
+            return res
+        if tr_tag.find_next_sibling('td').find('ul'):
+            listElement = tr_tag.find_next_sibling('td').find_all('li')
+            res = []
+            for elementLI in listElement:
+                res.append(elementLI.text)
+            return res
         elif tr_tag.find_next_sibling('td'):
             res = tr_tag.find_next_sibling('td').text
+        
     return res
 
 def getTank(linkTank):
@@ -53,6 +64,39 @@ def getTank(linkTank):
             width = getTankInfo(tr_tag,"Width")
             height = getTankInfo(tr_tag,"Height")
             produced = getTankInfo(tr_tag,"produced")
+            service = getTankInfo(tr_tag,"service")
+            designer = getTankInfo(tr_tag,"Designer")
+            manufacturer = getTankInfo(tr_tag,"Manufacturer")
+            engine = getTankInfo(tr_tag,"Engine")
+            mass = getTankInfo(tr_tag,"Mass")
+            wars = getTankInfo(tr_tag,"Wars")
+            secondaryArmament = getTankInfo(tr_tag,"Secondary")
+            mainArmament = getTankInfo(tr_tag,"Main")
+            suspension = getTankInfo(tr_tag,"suspension")
+            operationnalRange = getTankInfo(tr_tag,"range")
+            speed = getTankInfo(tr_tag,"speed")
+            armor = getTankInfo(tr_tag,"armor")
+            power = getTankInfo(tr_tag,"power")
+            #print(typeTank)
+            #print(originTank)
+            #print(crew)
+            #print(length)
+            #print(width)
+            #print(height)
+            #print(produced)
+            #print(service)
+            #print(designer)
+            #print(manufacturer)
+            #print(engine)
+            #print(mass)
+            #print(wars)
+            #print(secondaryArmament)
+            #print(mainArmament)
+            #print(suspension)
+            #print(operationnalRange)
+            #print(speed)
+            #print(armor)
+            #print(power)
 
 
 #listTank = getListTank()
