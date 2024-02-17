@@ -62,6 +62,12 @@ def getOperator(link:str, soupList):
     
     return listPaysOp
 
+def traitementInfos(infos):
+    res = str(infos).strip()
+    if re.search(r'\[\d+\]', res):
+        res = re.sub(r'\[\d+\]', '', res)
+    res = res.strip()
+    return res
 def getTank(linkTank):
     response = requests.get(linkTank)
     if response.status_code == 200:
@@ -72,27 +78,36 @@ def getTank(linkTank):
         pageStuff = soupList.find("table",class_="infobox vcard")
         # th_tags comporte tous les tags th du tableau
         th_tags = pageStuff.find_all('th',class_="infobox-label")
-
-        # # tr_tags comporte tous les tags <tr> du tableau
-        # tr_tags = pageStuff.find_all("tr")
-        # # il faut garder uniquement les tr où on a un couple <th>, <td>+
-        # for tr_tag in tr_tags:
-        #     if (tr_tag.find("td")):     ## peut-être inutile
-        #             print(tr_tag.find("th", class_="infobox-label"))
-        #         #print(getTankInfo(tr_tag.find("th").text.lower(),"Type"))
-                
-        #         #print(getTankInfo(tr_tag.find("th"),"Type"))
-
-
-
+        infosTank = {}
         for th_tag in th_tags:
-            #print(th_tag)
-            print(th_tag.text)
-            #print(th_tag.find_next_sibling('td'))
-            print(th_tag.find_next_sibling('td').text)
+            infosTank[th_tag.text] = ""
+            #print(th_tag.text)
+            #print(th_tag.find_next_sibling('td').text)
+            #print(infosTank)
+            if "\n" in th_tag.find_next_sibling('td').text:
+                listInfos = []
+                infossep = th_tag.find_next_sibling('td').text.split("\n")
+                for eltinfos in infossep:
+                    listInfos.append(traitementInfos(eltinfos))
+                infosTank[th_tag.text] = listInfos
+            elif "," in th_tag.find_next_sibling('td').text:
+                listInfos = []
+                infossep = th_tag.find_next_sibling('td').text.split(",")
+                for eltinfos in infossep:
+                    listInfos.append(traitementInfos(eltinfos))
+                infosTank[th_tag.text] = listInfos
+            elif th_tag.find_next_sibling('td').findChildren('ul'):
+                listInfos = []
+                #print(th_tag.text," : ",th_tag.find_next_sibling('td').findChildren('ul'))
+                for eltUL in th_tag.find_next_sibling('td').findChildren('ul'):
+                    for eltLI in eltUL.find_all('li'):
+                        listInfos.append(traitementInfos(eltLI.text))
+                infosTank[th_tag.text] = listInfos
+            else:
+                infosTank[th_tag.text] = traitementInfos(th_tag.find_next_sibling('td').text)
+                #print(th_tag.text," : ",th_tag.find_next_sibling('td').text)
+            print(th_tag.text," : ",infosTank[th_tag.text])
             print("========")
-            
-            #print("============")
 #listTank = getListTank()
 #for tankPage in listTank:
     #getTank(tankPage)
