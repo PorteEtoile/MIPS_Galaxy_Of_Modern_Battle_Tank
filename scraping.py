@@ -110,6 +110,12 @@ def getTank(linkTank):
                 for eltinfos in infossep:
                     listInfos.append(traitementInfos(eltinfos))
                 infosTank[th_tag.text] = listInfos
+            elif "<br>" in th_tag.find_next_sibling('td').text:
+                listInfos = []
+                infossep = th_tag.find_next_sibling('td').text.split("<br>")
+                for eltinfos in infossep:
+                    listInfos.append(traitementInfos(eltinfos))
+                infosTank[th_tag.text] = listInfos
             else:
                 infosTank[th_tag.text] = traitementInfos(th_tag.find_next_sibling('td').text)
                 #print(th_tag.text," : ",th_tag.find_next_sibling('td'))
