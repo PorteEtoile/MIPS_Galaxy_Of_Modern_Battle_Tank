@@ -98,14 +98,19 @@ def getTank(linkTank):
                 infosTank[th_tag.text] = listInfos
             elif th_tag.find_next_sibling('td').findChildren('ul'):
                 listInfos = []
-                #print(th_tag.text," : ",th_tag.find_next_sibling('td').findChildren('ul'))
                 for eltUL in th_tag.find_next_sibling('td').findChildren('ul'):
                     for eltLI in eltUL.find_all('li'):
                         listInfos.append(traitementInfos(eltLI.text))
                 infosTank[th_tag.text] = listInfos
+            elif "<br/>" in th_tag.find_next_sibling('td').text:
+                listInfos = []
+                infossep = th_tag.find_next_sibling('td').text.split("<br/>")
+                for eltinfos in infossep:
+                    listInfos.append(traitementInfos(eltinfos))
+                infosTank[th_tag.text] = listInfos
             else:
                 infosTank[th_tag.text] = traitementInfos(th_tag.find_next_sibling('td').text)
-                #print(th_tag.text," : ",th_tag.find_next_sibling('td').text)
+                #print(th_tag.text," : ",th_tag.find_next_sibling('td'))
             print(th_tag.text," : ",infosTank[th_tag.text])
             print("========")
 #listTank = getListTank()
