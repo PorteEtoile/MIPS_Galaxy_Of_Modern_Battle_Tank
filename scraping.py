@@ -55,11 +55,10 @@ def getTankInfo(th_tag,tag):
 def getOperator(link:str, soupList):
     ## Il faudrait get le lien du td, pour être surs du bon id et que ce soit automatique !
     ## Faires opérateurs non-étatiques
-    operators = soupList.find(id=link).parent.find_next_sibling('ul').find_all("li")
+    operators = soupList.find(id="Operators").parent.find_next_sibling('ul').find_all("li")
     listPaysOp = []
     for operatorsLi in operators:
         listPaysOp.append(operatorsLi.find("a").text)
-    
     return listPaysOp
 
 def traitementInfos(infos):
@@ -116,10 +115,12 @@ def getTank(linkTank):
                 for eltinfos in infossep:
                     listInfos.append(traitementInfos(eltinfos))
                 infosTank[th_tag.text] = listInfos
+            elif "See Operators" in th_tag.find_next_sibling('td').text or "See Operators" == th_tag.find_next_sibling('td').text:
+                infosTank[th_tag.text] = getOperator(linkTank,soupList)
             else:
                 infosTank[th_tag.text] = traitementInfos(th_tag.find_next_sibling('td').text)
                 #print(th_tag.text," : ",th_tag.find_next_sibling('td'))
-            print(th_tag.text," : ",traitementInfos(infosTank[th_tag.text]))
+            print(th_tag.text," : ",infosTank[th_tag.text])
             print("========")
 #listTank = getListTank()
 #for tankPage in listTank:
