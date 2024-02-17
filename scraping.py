@@ -29,76 +29,70 @@ def getListTank():
                         listTank.append(linkTank)
     return listTank
 
-def getTankInfo(tr_tag,tag):
+def getTankInfo(th_tag,tag):
     res = ""
-    if (tag.lower() == tr_tag.text.lower()) or (tag.lower() in tr_tag.text.lower()) :
-        if tr_tag.find_next_sibling('td').find('a'):
-            listElement = tr_tag.find_next_sibling('td').find_all('a')
-            res = []
-            for elementLI in listElement:
-                res.append(elementLI.text)
-            return res
-        if tr_tag.find_next_sibling('td').find('ul'):
-            listElement = tr_tag.find_next_sibling('td').find_all('li')
-            res = []
-            for elementLI in listElement:
-                res.append(elementLI.text)
-            return res
-        elif tr_tag.find_next_sibling('td'):
-            res = tr_tag.find_next_sibling('td').text
+    if (tag.lower() == th_tag) or (tag.lower() in th_tag) :
+        if (th_tag.find_next_sibling('td')):
+            res = th_tag.find_next_sibling('td').text
+    #     if th_tag.find_next_sibling('td').find('a'):
+
+    #         listElement = th_tag.find_next_sibling('td').find_all('a')
+    #         res = []
+    #         for elementLI in listElement:
+    #             res.append(elementLI.text)
+    #         return res
+    #     if th_tag.find_next_sibling('td').find('ul'):
+    #         listElement = th_tag.find_next_sibling('td').find_all('li')
+    #         res = []
+    #         for elementLI in listElement:
+    #             res.append(elementLI.text)
+    #         return res
+    #     elif th_tag.find_next_sibling('td'):
+    #         res = th_tag.find_next_sibling('td').text
         
-    return res
+    return res 
+
+def getOperator(link:str, soupList):
+    ## Il faudrait get le lien du td, pour être surs du bon id et que ce soit automatique !
+    ## Faires opérateurs non-étatiques
+    operators = soupList.find(id=link).parent.find_next_sibling('ul').find_all("li")
+    listPaysOp = []
+    for operatorsLi in operators:
+        listPaysOp.append(operatorsLi.find("a").text)
+    
+    return listPaysOp
 
 def getTank(linkTank):
     response = requests.get(linkTank)
     if response.status_code == 200:
         print("Access to the Tank's page")
         soupList = BeautifulSoup(response.text, 'html.parser')
+
+        # pageStuff = permet d'obtenir <table> du menu latéral des tanks
         pageStuff = soupList.find("table",class_="infobox vcard")
-        tr_tags = pageStuff.find_all('th',class_="infobox-label")
-        for tr_tag in tr_tags:
-            typeTank = getTankInfo(tr_tag,"Type")
-            originTank = getTankInfo(tr_tag,"origin")
-            crew = getTankInfo(tr_tag,"Crew")
-            length = getTankInfo(tr_tag,"length")
-            width = getTankInfo(tr_tag,"Width")
-            height = getTankInfo(tr_tag,"Height")
-            produced = getTankInfo(tr_tag,"produced")
-            service = getTankInfo(tr_tag,"service")
-            designer = getTankInfo(tr_tag,"Designer")
-            manufacturer = getTankInfo(tr_tag,"Manufacturer")
-            engine = getTankInfo(tr_tag,"Engine")
-            mass = getTankInfo(tr_tag,"Mass")
-            wars = getTankInfo(tr_tag,"Wars")
-            secondaryArmament = getTankInfo(tr_tag,"Secondary")
-            mainArmament = getTankInfo(tr_tag,"Main")
-            suspension = getTankInfo(tr_tag,"suspension")
-            operationnalRange = getTankInfo(tr_tag,"range")
-            speed = getTankInfo(tr_tag,"speed")
-            armor = getTankInfo(tr_tag,"armor")
-            power = getTankInfo(tr_tag,"power")
-            #print(typeTank)
-            #print(originTank)
-            #print(crew)
-            #print(length)
-            #print(width)
-            #print(height)
-            #print(produced)
-            #print(service)
-            #print(designer)
-            #print(manufacturer)
-            #print(engine)
-            #print(mass)
-            #print(wars)
-            #print(secondaryArmament)
-            #print(mainArmament)
-            #print(suspension)
-            #print(operationnalRange)
-            #print(speed)
-            #print(armor)
-            #print(power)
+        # th_tags comporte tous les tags th du tableau
+        th_tags = pageStuff.find_all('th',class_="infobox-label")
+
+        # # tr_tags comporte tous les tags <tr> du tableau
+        # tr_tags = pageStuff.find_all("tr")
+        # # il faut garder uniquement les tr où on a un couple <th>, <td>+
+        # for tr_tag in tr_tags:
+        #     if (tr_tag.find("td")):     ## peut-être inutile
+        #             print(tr_tag.find("th", class_="infobox-label"))
+        #         #print(getTankInfo(tr_tag.find("th").text.lower(),"Type"))
+                
+        #         #print(getTankInfo(tr_tag.find("th"),"Type"))
 
 
+
+        for th_tag in th_tags:
+            #print(th_tag)
+            print(th_tag.text)
+            #print(th_tag.find_next_sibling('td'))
+            print(th_tag.find_next_sibling('td').text)
+            print("========")
+            
+            #print("============")
 #listTank = getListTank()
 #for tankPage in listTank:
     #getTank(tankPage)
