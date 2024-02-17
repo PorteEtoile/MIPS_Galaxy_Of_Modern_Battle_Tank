@@ -66,6 +66,8 @@ def traitementInfos(infos):
     res = str(infos).strip()
     if re.search(r'\[\d+\]', res):
         res = re.sub(r'\[\d+\]', '', res)
+    if re.search(r'\xa0', res):
+        res = re.sub(r'\xa0', ' ', res)
     res = res.strip()
     return res
 def getTank(linkTank):
@@ -111,7 +113,7 @@ def getTank(linkTank):
             else:
                 infosTank[th_tag.text] = traitementInfos(th_tag.find_next_sibling('td').text)
                 #print(th_tag.text," : ",th_tag.find_next_sibling('td'))
-            print(th_tag.text," : ",infosTank[th_tag.text])
+            print(th_tag.text," : ",traitementInfos(infosTank[th_tag.text]))
             print("========")
 #listTank = getListTank()
 #for tankPage in listTank:
