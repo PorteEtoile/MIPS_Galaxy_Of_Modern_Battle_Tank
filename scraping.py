@@ -8,7 +8,7 @@ import scrapy
 import re
 from bs4 import BeautifulSoup
 
-def getListTank():
+def getListLinkTank():
     listTank = []
     genericLink = "https://en.wikipedia.org/"
     linkList = "https://en.wikipedia.org/wiki/List_of_Russo-Ukrainian_War_military_equipment"
@@ -29,29 +29,6 @@ def getListTank():
                         listTank.append(linkTank)
     return listTank
 
-def getTankInfo(th_tag,tag):
-    res = ""
-    if (tag.lower() == th_tag) or (tag.lower() in th_tag) :
-        if (th_tag.find_next_sibling('td')):
-            res = th_tag.find_next_sibling('td').text
-    #     if th_tag.find_next_sibling('td').find('a'):
-
-    #         listElement = th_tag.find_next_sibling('td').find_all('a')
-    #         res = []
-    #         for elementLI in listElement:
-    #             res.append(elementLI.text)
-    #         return res
-    #     if th_tag.find_next_sibling('td').find('ul'):
-    #         listElement = th_tag.find_next_sibling('td').find_all('li')
-    #         res = []
-    #         for elementLI in listElement:
-    #             res.append(elementLI.text)
-    #         return res
-    #     elif th_tag.find_next_sibling('td'):
-    #         res = th_tag.find_next_sibling('td').text
-        
-    return res 
-
 def getOperator(link:str, soupList):
     ## Il faudrait get le lien du td, pour être surs du bon id et que ce soit automatique !
     ## Faires opérateurs non-étatiques
@@ -69,12 +46,17 @@ def traitementInfos(infos):
         res = re.sub(r'\xa0', ' ', res)
     res = res.strip()
     return res
+
+def afficheInfosTank(tank):
+    for info in tank:
+        print(info," : ",tank[info])
+        print("========")
+
 def getTank(linkTank):
     response = requests.get(linkTank)
     if response.status_code == 200:
         print("Access to the Tank's page")
         soupList = BeautifulSoup(response.text, 'html.parser')
-
         # pageStuff = permet d'obtenir <table> du menu latéral des tanks
         pageStuff = soupList.find("table",class_="infobox vcard")
         # th_tags comporte tous les tags th du tableau
@@ -82,9 +64,6 @@ def getTank(linkTank):
         infosTank = {}
         for th_tag in th_tags:
             infosTank[th_tag.text] = ""
-            #print(th_tag.text)
-            #print(th_tag.find_next_sibling('td').text)
-            #print(infosTank)
             if "\n" in th_tag.find_next_sibling('td').text:
                 listInfos = []
                 infossep = th_tag.find_next_sibling('td').text.split("\n")
@@ -119,11 +98,14 @@ def getTank(linkTank):
                 infosTank[th_tag.text] = getOperator(linkTank,soupList)
             else:
                 infosTank[th_tag.text] = traitementInfos(th_tag.find_next_sibling('td').text)
-                #print(th_tag.text," : ",th_tag.find_next_sibling('td'))
-            print(th_tag.text," : ",infosTank[th_tag.text])
-            print("========")
-#listTank = getListTank()
-#for tankPage in listTank:
-    #getTank(tankPage)
-getTank("https://en.wikipedia.org/wiki/T-90")
+        return infosTank
+
+#listTank = []
+#listLinkTank = getListLinkTank()
+#for tankPage in listLinkTank:
+    #listTank.append(getTank(tankPage))
+#for tank in listTank:
+    #afficheInfosTank(tank)
+infosTank = getTank("https://en.wikipedia.org/wiki/T-90")
+afficheInfosTank(infosTank)
 
