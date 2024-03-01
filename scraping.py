@@ -29,13 +29,28 @@ def getListLinkTank():
                         listTank.append(linkTank)
     return listTank
 
-def getOperator(link:str, soupList):
+def getOperator(link:str, soupList,th_tag):
     ## Il faudrait get le lien du td, pour être surs du bon id et que ce soit automatique !
     ## Faires opérateurs non-étatiques
-    operators = soupList.find(id="Operators").parent.find_next_sibling('ul').find_all("li")
+    genericLink = "https://en.wikipedia.org/"
     listPaysOp = []
-    for operatorsLi in operators:
-        listPaysOp.append(operatorsLi.find("a").text)
+    if "Used" in th_tag.text and "by" in th_tag.text:
+        tdfilsOperateur = th_tag.find_next_sibling('td')
+        linkOperateur = genericLink+ str(tdfilsOperateur.findChildren('a')[0]['href'])
+        responseLinkOperator = requests.get(linkOperateur)
+        if responseLinkOperator.status_code == 200:
+                soupOperator = BeautifulSoup(responseLinkOperator.text, 'html.parser')
+                h2Operator_tags = soupOperator.find_all('h2')
+                for h2Operator_tag in h2Operator_tags:
+                    if "operators" in h2Operator_tag.text.lower():
+                        listOperator = h2Operator_tag.find_next_sibling('ul').find_all("li")
+                        for operator in listOperator:
+                            if operator.findChildren('a')[0].text != "":
+                                listPaysOp.append(operator.findChildren('a')[0].text)
+        else:
+            operators = soupList.find(id="Operators").parent.find_next_sibling('ul').find_all("li")
+            for operatorsLi in operators:
+                listPaysOp.append(operatorsLi.find("a").text)
     return listPaysOp
 
 def traitementInfos(infos):
@@ -53,6 +68,7 @@ def afficheInfosTank(tank):
         print("========")
 
 def getTank(linkTank):
+    genericLink = "https://en.wikipedia.org/"
     response = requests.get(linkTank)
     if response.status_code == 200:
         print("Access to the Tank's page")
@@ -95,7 +111,10 @@ def getTank(linkTank):
                     listInfos.append(traitementInfos(eltinfos))
                 infosTank[th_tag.text] = listInfos
             elif "See Operators" in th_tag.find_next_sibling('td').text or "See Operators" == th_tag.find_next_sibling('td').text:
-                infosTank[th_tag.text] = getOperator(linkTank,soupList)
+                if "Used" in th_tag.text and "by" in th_tag.text:
+                    infosTank[th_tag.text] = getOperator(linkTank,soupList,th_tag)
+                else:
+                    infosTank[th_tag.text] = []
             else:
                 infosTank[th_tag.text] = traitementInfos(th_tag.find_next_sibling('td').text)
         return infosTank
@@ -103,9 +122,12 @@ def getTank(linkTank):
 #listTank = []
 #listLinkTank = getListLinkTank()
 #for tankPage in listLinkTank:
+    #print("RÉCUPÉRATION DE LA PAGE : ",tankPage)
     #listTank.append(getTank(tankPage))
 #for tank in listTank:
     #afficheInfosTank(tank)
-infosTank = getTank("https://en.wikipedia.org/wiki/T-90")
+    
+infosTank = getTank("https://en.wikipedia.org//wiki/T-54/55")
+#infosTank = getTank("https://en.wikipedia.org/wiki/T-90")
 afficheInfosTank(infosTank)
 
