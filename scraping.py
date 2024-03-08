@@ -8,18 +8,28 @@ import scrapy
 import re
 from bs4 import BeautifulSoup
 
+# Récupère la liste des pages HTTP wikipedia de tous les tanks ayant participé à la guerre en Ukraine
 def getListLinkTank():
     listTank = []
+    # Définition des liens http utiles à la récupération de la liste des tanks
+    # linkList est la page wikipédia comportant la liste de tous les équipements militaire ayant servit durant le conflit
+    # genericLink est le lien de la page d'accueil de wikipedia 
     genericLink = "https://en.wikipedia.org/"
     linkList = "https://en.wikipedia.org/wiki/List_of_Russo-Ukrainian_War_military_equipment"
     response = requests.get(linkList)
+    # Si code 200 alors la requête http à la page des équipements militaire a réussie
     if response.status_code == 200:
-        print("Access to the Tank's list")
+        # Dans cette page, les titres des équipements militaires sont disposés par des balises HTML <h4>
+        # Avec beautifulSoup on récupère la page de contenu HTML et on parse toutes les balises <h4>
         soupList = BeautifulSoup(response.text, 'html.parser')
         pageStuff = soupList.find("div",class_="mw-content-ltr mw-parser-output")
         h4_tags = pageStuff.find_all('h4')
         for h4_tag in h4_tags:
+            # Balise <h4> correspondant aux Tanks
             if h4_tag.text == "Tanks[edit]":
+                # Récupération de la liste de place de tous les tanks
+                # On récupère le lien href menant à la page wikipédia de chaque Tank
+                # Puis on concatène ce morceau de lien avec le lien générique wikipédia pour avoir le lien HTTP complet
                 next_ul = h4_tag.find_next_sibling('ul')
                 if next_ul :
                     li_tags = next_ul.find_all('li')
@@ -130,7 +140,7 @@ def getTank(linkTank):
 #for tank in listTank:
     #afficheInfosTank(tank)
     
-#infosTank = getTank("https://en.wikipedia.org//wiki/T-54/55")
-infosTank = getTank("https://en.wikipedia.org/wiki/T-90")
+infosTank = getTank("https://en.wikipedia.org//wiki/T-54/55")
+#infosTank = getTank("https://en.wikipedia.org/wiki/T-90")
 afficheInfosTank(infosTank)
 
