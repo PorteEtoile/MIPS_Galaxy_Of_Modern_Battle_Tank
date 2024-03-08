@@ -80,6 +80,7 @@ def getTank(linkTank):
         # th_tags comporte tous les tags th du tableau
         th_tags = pageStuff.find_all('th',class_="infobox-label")
         infosTank = {}
+        infosTank["Name"] = pageStuff.find('th',class_="infobox-above hproduct").findChildren('span')[0].text.strip()
         for th_tag in th_tags:
             infosTank[th_tag.text] = ""
             if "\n" in th_tag.find_next_sibling('td').text:
@@ -121,15 +122,15 @@ def getTank(linkTank):
                 infosTank[th_tag.text] = traitementInfos(th_tag.find_next_sibling('td').text)
         return infosTank
 
-listTank = []
-listLinkTank = getListLinkTank()
-for tankPage in listLinkTank:
+#listTank = []
+#listLinkTank = getListLinkTank()
+#for tankPage in listLinkTank:
     #print(tankPage)
-    listTank.append(getTank(tankPage))
-for tank in listTank:
-    afficheInfosTank(tank)
+    #listTank.append(getTank(tankPage))
+#for tank in listTank:
+    #afficheInfosTank(tank)
     
 #infosTank = getTank("https://en.wikipedia.org//wiki/T-54/55")
-#infosTank = getTank("https://en.wikipedia.org/wiki/T-90")
-#afficheInfosTank(infosTank)
+infosTank = getTank("https://en.wikipedia.org/wiki/T-90")
+afficheInfosTank(infosTank)
 
