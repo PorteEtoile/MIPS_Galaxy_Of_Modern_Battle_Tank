@@ -102,18 +102,25 @@ def afficheInfosTank(tank):
         print(info," : ",tank[info])
         print("========")
 
+# Récupère toutes les informations d'un tank selon sa page wikipédia
+# Les informations récupérées proviennent de la carte d'information à droite de la page
 def getTank(linkTank):
     genericLink = "https://en.wikipedia.org/"
     response = requests.get(linkTank)
+    # Si code 200 alors la requête HTTP a réussie
     if response.status_code == 200:
-        print("Access to the Tank's page")
         soupList = BeautifulSoup(response.text, 'html.parser')
         # pageStuff = permet d'obtenir <table> du menu latéral des tanks
         pageStuff = soupList.find("table",class_="infobox vcard")
         # th_tags comporte tous les tags th du tableau
         th_tags = pageStuff.find_all('th',class_="infobox-label")
+        # Création d'un dictionnaire qui va comporter toutes les informations du tank selon le concept clé / valeur avec : 
+        # Clé = Nom / Titre de l'information | Valeur = Valeur de l'information
         infosTank = {}
         infosTank["Name"] = pageStuff.find('th',class_="infobox-above hproduct").findChildren('span')[0].text.strip()
+        # On parcourt toutes les balises <th> de la carte d'information du tank
+        # Chaque balise <th> contient le titre d'une information
+        # Chaque balise <th> possède une balise soeur <td> auquel on va récupérer le texte pour avoir la valeur de l'information
         for th_tag in th_tags:
             infosTank[th_tag.text] = ""
             if "\n" in th_tag.find_next_sibling('td').text:
