@@ -65,6 +65,8 @@ def getOperator(link:str, soupList,th_tag):
                                 listPaysOp.append(operator.findChildren('a')[0].text)
     return listPaysOp
 
+# Lors de la récupération de l'information d'un tank, on procède à un nettoyage du texte
+# S'il y a la chaine \xa0  qui est l'équivalent en python du "&nbsp;" en HTML, on le remplace par un espace
 def traitementInfos(infos):
     res = str(infos).strip()
     if re.search(r'\[\d+\]', res):
