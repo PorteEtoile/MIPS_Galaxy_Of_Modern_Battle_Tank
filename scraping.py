@@ -39,22 +39,39 @@ def getListLinkTank():
                         listTank.append(linkTank)
     return listTank
 
+# Récupération de la liste des utilisateurs pour un tank
+# 2 possibilités pour récupérer la liste : 
+# - Soit la liste est présente dans la page wikipédia du tank (lien interne)
+# - Soit la liste est accessible sur une page wikipédia différente de celle du tank (lien externe)
 def getOperator(link:str, soupList,th_tag):
     ## Il faudrait get le lien du td, pour être surs du bon id et que ce soit automatique !
     ## Faire opérateurs non-étatiques
+
+    # Réutilisation du lien générique pour concaténer le lien href menant à la liste des opérateurs avec le lien wikipédia
     genericLink = "https://en.wikipedia.org/"
     listPaysOp = []
+    # Vérification que la balise <th> correspond bien à celle des opérateurs
     if "Used" in th_tag.text and "by" in th_tag.text:
         tdfilsOperateur = th_tag.find_next_sibling('td')
+        # Vérification que la liste des opérateurs est dans un lien interne
         if re.search(r'^#',tdfilsOperateur.findChildren('a')[0]['href']):
+            # On est dans le cas d'un lien interne
+            # On va alors récupère l'élément HTML ayant l'ID du lien interne, puis parcourir la liste <ul>
+            # Pour chaque élément <li> de la liste <ul>, on récupère le texte qui sera le nom de l'opérateur
             lienInterne = str(tdfilsOperateur.findChildren('a')[0]['href'].split("#")[1])
             operators = soupList.find(id=lienInterne).parent.find_next_sibling('ul').find_all("li")
             for operatorsLi in operators:
                 listPaysOp.append(operatorsLi.find("a").text)
         else:
+            # On est dans le cas d'un lien externe
+            # On récupère le lien de la page wikipédia comportant la liste des opérateurs
             linkOperateur = genericLink+ str(tdfilsOperateur.findChildren('a')[0]['href'])
             responseLinkOperator = requests.get(linkOperateur)
+            # Si code 200 alors la requête HTTP a réussie
             if responseLinkOperator.status_code == 200:
+                # On parse la page HTML avec BeautifulSoup et on récupère les titres H2
+                # Si un titre <h2> comporte le mot clé "operators" alors on a la liste des opérateurs
+                # On parcourt ensuite chaque élement <li> de la liste <ul> et on récupère le texte qui sera le nom de l'opérateur
                 soupOperator = BeautifulSoup(responseLinkOperator.text, 'html.parser')
                 h2Operator_tags = soupOperator.find_all('h2')
                 for h2Operator_tag in h2Operator_tags:
