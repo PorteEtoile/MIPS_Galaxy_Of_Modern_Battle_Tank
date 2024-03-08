@@ -74,6 +74,10 @@ def traitementInfos(infos):
     res = res.strip()
     return res
 
+
+# Affiche sur la console les informations du tank
+# Les informations du tank sont stockés dans un dictionnaire avec :
+# Clé = Nom / Titre de l'information | Valeur = Valeur de l'information
 def afficheInfosTank(tank):
     for info in tank:
         print(info," : ",tank[info])
