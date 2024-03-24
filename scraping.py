@@ -82,6 +82,16 @@ def getOperator(link:str, soupList,th_tag):
                                 listPaysOp.append(operator.findChildren('a')[0].text)
     return listPaysOp
 
+def getVariants(link:str, soupList,th_tag):
+    genericLink = "https://en.wikipedia.org/"
+    listVariants = []
+    if "Variants" in th_tag.text:
+        tdfilsVariants = th_tag.find_next_sibling('td')
+        if re.search(r'^#',tdfilsVariants.findChildren('a')[0]['href']):
+            lienInterne = str(tdfilsVariants.findChildren('a')[0]['href'].split("#")[1])
+    return listVariants
+
+
 # Lors de la récupération de l'information d'un tank, on procède à un nettoyage du texte
 # S'il y a la chaine \xa0  qui est l'équivalent en python du "&nbsp;" en HTML, on le remplace par un espace
 def traitementInfos(infos):
@@ -153,24 +163,22 @@ def getTank(linkTank):
                 for eltinfos in infossep:
                     listInfos.append(traitementInfos(eltinfos))
                 infosTank[th_tag.text] = listInfos
-            elif "See Operators" in th_tag.find_next_sibling('td').text or "See Operators" == th_tag.find_next_sibling('td').text:
-                if "Used" in th_tag.text and "by" in th_tag.text:
-                    infosTank[th_tag.text] = getOperator(linkTank,soupList,th_tag)
-                else:
-                    infosTank[th_tag.text] = []
+            elif "Used" in th_tag.text and "by" in th_tag.text:
+                infosTank[th_tag.text] = getOperator(linkTank,soupList,th_tag)
+            elif "Variants" in th_tag.text:
+                infosTank[th_tag.text] = getVariants(linkTank,soupList,th_tag)
             else:
                 infosTank[th_tag.text] = traitementInfos(th_tag.find_next_sibling('td').text)
         return infosTank
 
-#listTank = []
-#listLinkTank = getListLinkTank()
-#for tankPage in listLinkTank:
-    #print(tankPage)
-    #listTank.append(getTank(tankPage))
-#for tank in listTank:
-    #afficheInfosTank(tank)
+listTank = []
+listLinkTank = getListLinkTank()
+for tankPage in listLinkTank:
+    listTank.append(getTank(tankPage))
+for tank in listTank:
+    afficheInfosTank(tank)
     
-infosTank = getTank("https://en.wikipedia.org//wiki/T-54/55")
+#infosTank = getTank("https://en.wikipedia.org//wiki/T-54/55")
 #infosTank = getTank("https://en.wikipedia.org/wiki/T-90")
-afficheInfosTank(infosTank)
+#afficheInfosTank(infosTank)
 
