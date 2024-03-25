@@ -6,6 +6,8 @@ import os
 import requests
 import scrapy
 import re
+import json
+import uuid
 from bs4 import BeautifulSoup
 
 # Récupère la liste des pages HTTP wikipedia de tous les tanks ayant participé à la guerre en Ukraine
@@ -171,12 +173,66 @@ def getTank(linkTank):
                 infosTank[th_tag.text] = traitementInfos(th_tag.find_next_sibling('td').text)
         return infosTank
 
-listTank = []
-listLinkTank = getListLinkTank()
-for tankPage in listLinkTank:
-    listTank.append(getTank(tankPage))
-for tank in listTank:
-    afficheInfosTank(tank)
+
+def CreerJSONTanks(listTank,nomFichier):
+    jsonTanks = json.dumps(listTank, indent=4)
+    with open(nomFichier, 'w') as fichier:
+        fichier.write(jsonTanks)
+
+def CreerGalaxie(nomFichier,description,icon,authors,name,namespace,type,uuid,version):
+    json_galaxie = {
+        "description" : description,
+        "icon" : icon,
+        "authors" : authors,
+        "name" : name,
+        "namespace" : namespace,
+        "type" : type,
+        "uuid" : uuid,
+        "version" : version
+    }
+    chemin_galaxies = os.path.join(os.getcwd(), "galaxies")
+    chemin_fichier_json = os.path.join(chemin_galaxies, nomFichier)
+    with open(chemin_fichier_json, 'w') as fichier:
+        json.dump(json_galaxie, fichier, indent=4)
+
+def CreerCluster(nomFichier,authors,category,name,source,type,uuidCluster,fichierData):
+    chemin_clusters = os.path.join(os.getcwd(), "clusters")
+    chemin_clusters_json = os.path.join(chemin_clusters, nomFichier)
+    json_clusters = {
+        "authors" : authors,
+        "category" : category,
+        "name" : name,
+        "source" : source,
+        "type" : type,
+        "uuid" : uuidCluster
+    }
+    #
+    listMeta = []
+    with open(fichierData, 'r') as fichier:
+        listTanks = json.load(fichier)
+        for tank in listTanks:
+            uuidMeta = str(uuid.uuid4())
+            meta = {
+                "meta" : tank,
+                "uuid" :uuidMeta,
+                "value" : tank["Name"]
+            }
+            listMeta.append(meta)
+    json_clusters["values"] = listMeta
+    with open(chemin_clusters_json, 'w') as fichier:
+        json.dump(json_clusters, fichier, indent=4)
+
+
+#listTank = []
+#listLinkTank = getListLinkTank()
+#for tankPage in listLinkTank:
+    #listTank.append(getTank(tankPage))
+#CreerJSONTanks(listTank,"tanks.json")
+auteurs = ["ZANNIER Chloé","ZIMMERMANN Julien"]
+#CreerGalaxie("galaxieTanks.json","Une galaxie de tank","Tank",auteurs,"Tanks","Tanks","tanksList",str(uuid.uuid4()),1)
+#for tank in listTank:
+    #afficheInfosTank(tank)
+CreerCluster("ClusterTanks.json",auteurs,"Tank","Tank","blabla","Tank",str(uuid.uuid4()),"tanks.json")
     
 #infosTank = getTank("https://en.wikipedia.org//wiki/T-54/55")
 #infosTank = getTank("https://en.wikipedia.org/wiki/T-90")

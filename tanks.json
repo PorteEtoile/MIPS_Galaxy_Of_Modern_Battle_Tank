@@ -1,0 +1,1436 @@
+[
+    {
+        "Name": "T-54/55",
+        "Type": [
+            "",
+            "Medium tank (Warsaw pact designation)",
+            "Main battle tank",
+            "(NATO designation)"
+        ],
+        "Place\u00a0of\u00a0origin": "Soviet Union",
+        "In\u00a0service": "1948\u2013present",
+        "Used\u00a0by": [
+            "Abkhazia",
+            "Afghanistan",
+            "Algeria",
+            "Angola",
+            "Armenia",
+            "Azerbaijan",
+            "Bosnia-Herzegovina",
+            "Cambodia",
+            "Central African Republic",
+            "Chad",
+            "Congo-Brazzaville",
+            "Congo-Kinshasa",
+            "Cuba",
+            "Egypt",
+            "Equatorial Guinea",
+            "Eritrea",
+            "Ethiopia",
+            "Georgia",
+            "Guinea",
+            "Iran",
+            "Iraq",
+            "Kurdistan",
+            "Ivory Coast",
+            "Kurdish",
+            "Laos",
+            "Lebanon",
+            "Libya",
+            "Mali",
+            "Mauritania",
+            "Mongolia",
+            "Mozambique",
+            "Myanmar",
+            "Namibia",
+            "Nicaragua",
+            "Nigeria",
+            "North Korea",
+            "Pakistan",
+            "Peru",
+            "Romania",
+            "Russia",
+            "Rwanda",
+            "Serbia",
+            "Slovenia",
+            "Sri Lanka",
+            "Somalia",
+            "Somaliland",
+            "South Ossetia",
+            "South Sudan",
+            "Sudan",
+            "Syria",
+            "Tanzania",
+            "Togo",
+            "Uganda",
+            "Ukraine",
+            "Uruguay",
+            "Uzbekistan",
+            "Vietnam",
+            "Yemen",
+            "Zambia",
+            "Zimbabwe",
+            "Albania",
+            "Bangladesh",
+            "Belarus",
+            "Bulgaria",
+            "Croatia",
+            "Chile",
+            "Czech Republic",
+            "Czechoslovakia",
+            "Ecuador",
+            "Finland",
+            "Germany",
+            "East Germany",
+            "Hungary",
+            "India",
+            "Islamic State of Iraq and the Levant",
+            "Israel",
+            "Lebanese Forces",
+            "Latvia",
+            "Liberation Tigers of Tamil Eelam",
+            "Montenegro",
+            "Morocco",
+            "North Macedonia",
+            "National liberation army",
+            "North Vietnam",
+            "People's Liberation Army (Lebanon)",
+            "Poland",
+            "Republika Srpska",
+            "Rhodesia",
+            "Slovakia",
+            "South Lebanon Army",
+            "Soviet Union",
+            "Sweden",
+            "Tigray Defense Forces",
+            "Yugoslavia",
+            "South Africa",
+            "Turkey"
+        ],
+        "Wars": "See Combat History",
+        "Designer": [
+            "",
+            "KMDB (T-54)",
+            "OKB-520 (T-54A and later)",
+            ""
+        ],
+        "Designed": "1945\u20131958",
+        "Manufacturer": [
+            "",
+            "KhPZ, UVZ (Soviet Union)",
+            "Bumar-\u0141ab\u0119dy (Poland)",
+            "ZTS Martin (Czechoslovakia)",
+            ""
+        ],
+        "Unit\u00a0cost": [
+            "US$200",
+            "000 (export price to Egypt",
+            "1956\u20131972)"
+        ],
+        "Produced": [
+            "",
+            "1946\u20131981 (Soviet Union)",
+            "1956\u20131979 (Poland)",
+            "1957\u20131983 (Czechoslovakia)",
+            ""
+        ],
+        "No.\u00a0built": [
+            "96",
+            "500\u2013100",
+            "000+ est.",
+            "including:35",
+            "000 T-54 and 27",
+            "500 T-55 (by Soviet Union)13",
+            "000 Type-59/69/79 (by China)11",
+            "000 T-54/55 (by Czechoslovakia)10",
+            "000 T-54/55 (by Poland)"
+        ],
+        "Variants": [],
+        "Mass": "36 metric tons (35.4 long tons; 39.7 short tons)",
+        "Length": "9.00 m (29 ft 6 in) with gun forward",
+        "Width": "3.37 m (11 ft 1 in)",
+        "Height": "2.40 m (7 ft 10 in)",
+        "Crew": "4",
+        "Armour": [
+            "205 mm turret front",
+            "130 mm turret sides",
+            "60 mm turret rear",
+            "30 mm turret roof",
+            "120 mm hull front at 60\u00b0 (100 mm after 1949)",
+            "79 mm hull upper sides",
+            "20 mm hull lower sides",
+            "60 mm at 0\u00b0 hull rear",
+            "20 mm hull bottom",
+            "33\u201316 mm hull roof"
+        ],
+        "Mainarmament": "D-10T 100 mm rifled gun (43 rounds)",
+        "Secondaryarmament": [
+            "7.62 mm SGMT coaxial machine gun",
+            "(12.7 mm DShK heavy machine gun)"
+        ],
+        "Engine": "Model V-55(V-54) V-12 water-cooled. 38.88 litre diesel500 horsepower (373 kW) up to 800 horsepower (600 kW) (late versions)",
+        "Power/weight": "14.6 horsepower per metric ton (10.9 kW/t)",
+        "Transmission": [
+            "Mechanical (synchromesh)",
+            "5 forward",
+            "1 reverse gears"
+        ],
+        "Suspension": "Torsion bar",
+        "Ground\u00a0clearance": "0.425 m (16.7 in)",
+        "Fuel\u00a0capacity": [
+            "580 L internal",
+            "320 L external (less on early T54)",
+            "400 L jettisonable rear drums"
+        ],
+        "Operationalrange": [
+            "325 kilometres (202 mi)",
+            "610 kilometres (380 mi) with extra tanks (on unpaved roads)"
+        ],
+        "Maximum speed ": "51 kilometres per hour (32 mph)"
+    },
+    {
+        "Name": "T-62",
+        "Type": "Main battle tank",
+        "Place\u00a0of\u00a0origin": "Soviet Union",
+        "In\u00a0service": "1961\u2013present",
+        "Used\u00a0by": [
+            "Afghanistan",
+            "Algeria",
+            "Angola",
+            "Cuba",
+            "Egypt",
+            "Ethiopia",
+            "Iran",
+            "Kurdistan Region",
+            "Libya",
+            "North Korea",
+            "Russia",
+            "Sahrawi Arab Democratic Republic"
+        ],
+        "Wars": "See combat history",
+        "Designer": "OKB-520 design bureau",
+        "Manufacturer": "Uralvagonzavod",
+        "Unit\u00a0cost": [
+            "US$300",
+            "000 (export price to Egypt",
+            "1972)"
+        ],
+        "Produced": "1961\u20131975 (USSR) ~1980s (North Korea)",
+        "No.\u00a0built": [
+            "More than 22",
+            "700"
+        ],
+        "Mass": "37 t (41 short tons; 36 long tons)",
+        "Length": "9.34 m (30 ft 8 in) with barrel in forward position  6.63 m (21 ft 9 in) hull only",
+        "Width": "3.30 m (10 ft 10 in)",
+        "Height": "2.40 m (7 ft 10 in)",
+        "Crew": [
+            "4 (commander",
+            "driver",
+            "gunner",
+            "loader)"
+        ],
+        "Armour": "Cast turret  214 (242 after 1972) mm turret front  153 mm turret sides  97 mm turret rear  40 mm turret roof Hull102 mm at 60\u00b0 hull front  79 mm hull upper sides  15 mm hull lower sides  46 mm at 0\u00b0 hull rear  20 mm hull bottom  31 mm hull roof",
+        "Mainarmament": "115 mm U-5TS (2A20) smoothbore gun",
+        "Secondaryarmament": "7.62 mm PKT coaxial general-purpose machine gun (2500 rounds)  12.7 mm DShK 1938/46 antiaircraft heavy machine gun (optional until T-62 Obr.1972)",
+        "Engine": "V-55V (based on the Kharkiv model V-2)580 (later 620) hp.",
+        "Power/weight": "14.5 hp/tonne (10.8 kW/tonne)",
+        "Suspension": "torsion bar",
+        "Ground\u00a0clearance": "425 mm (16.7 in)",
+        "Fuel\u00a0capacity": "960 L  1360 L with two 200-liter extra fuel tanks",
+        "Operationalrange": "450 km (280 mi) on road (650 km (400 mi) with two 200 L (53 US gal; 44 imp gal) extra fuel tanks)  320 km (200 mi) cross-country (450 km (280 mi) with two 200-liter extra fuel tanks)",
+        "Maximum speed ": "50 km/h (31 mph) (road)  40 km/h (25 mph) (cross country)"
+    },
+    {
+        "Name": "T-64",
+        "Type": "Main battle tank",
+        "Place\u00a0of\u00a0origin": "Soviet Union",
+        "In\u00a0service": "1966\u2013present",
+        "Used\u00a0by": [
+            "Democratic Republic of the Congo",
+            "",
+            "Russia",
+            "Ukraine",
+            "",
+            "",
+            "Uzbekistan"
+        ],
+        "Wars": [
+            "",
+            "Transnistria War",
+            "Angolan Civil War",
+            "Russo-Ukrainian War",
+            "War in Donbass",
+            "2022 Russian invasion of Ukraine",
+            ""
+        ],
+        "Designer": "KMDB",
+        "Designed": "1951\u20131962",
+        "Manufacturer": "Malyshev Factory",
+        "Produced": "1963\u20131987",
+        "No.\u00a0built": [
+            "\u224813",
+            "000"
+        ],
+        "Mass": "38 tonnes (42 short tons; 37 long tons)",
+        "Length": "9.225 m (30 ft 3.2 in) (gun forward)",
+        "Width": "3.415 m (11 ft 2.4 in)",
+        "Height": "2.172 m (7 ft 1.5 in)",
+        "Crew": [
+            "3 (driver",
+            "commander",
+            "gunner)"
+        ],
+        "Armour": [
+            "Glass-reinforced plastic sandwiched between layers of steel.",
+            "ERA plates on later versions",
+            "",
+            "Hull & turret \u2013 370 mm to 440 mm vs APFSDS500 mm to 575 mm vs HEAT"
+        ],
+        "Mainarmament": [
+            "125\u2009mm smoothbore gun 2A26(M/M-1) (T-64A)",
+            "125\u2009mm smoothbore gun D-81T (aka 2A46)"
+        ],
+        "Secondaryarmament": [
+            "7.62\u2009mm PKMT coaxial machine gun",
+            "12.7\u2009mm NSVT anti-aircraft machine gun"
+        ],
+        "Engine": "5TDF 5-cylinder diesel 13.6 litre700\u2009hp (522\u2009kW)",
+        "Power/weight": "18.4\u2009hp/tonne (13.7\u2009kW/ton)",
+        "Suspension": "Torsion bar",
+        "Operationalrange": [
+            "500 km (310 mi)",
+            "700 km (430 mi) with external tanks"
+        ],
+        "Maximum speed ": "45\u201360 km/h (28\u201337 mph) depending on version"
+    },
+    {
+        "Name": "T-72",
+        "Type": "Main battle tank",
+        "Place\u00a0of\u00a0origin": "Soviet Union",
+        "In\u00a0service": "1973\u2013present",
+        "Used\u00a0by": [
+            "Algeria",
+            "Angola",
+            "Armenia",
+            "Azerbaijan",
+            "Belarus",
+            "Bulgaria",
+            "Canada",
+            "Czech Republic",
+            "Democratic Republic of the Congo",
+            "Ethiopia",
+            "Georgia",
+            "Hungary",
+            "India",
+            "Iran",
+            "Iraq",
+            "Kurdistan",
+            "Kazakhstan",
+            "Kenya",
+            "Kyrgyzstan",
+            "Laos",
+            "Libya",
+            "Malaysia",
+            "Morocco",
+            "Mongolia",
+            "Myanmar",
+            "Nicaragua",
+            "Nigeria",
+            "North Korea",
+            "North Macedonia",
+            "Poland",
+            "Russia",
+            "Slovakia",
+            "Serbia",
+            "South Sudan",
+            "Sudan",
+            "South Ossetia",
+            "Syria",
+            "Syrian Democratic Forces",
+            "Tajikistan",
+            "Turkmenistan",
+            "Uganda",
+            "Ukraine",
+            "Russian separatist forces in Donbas",
+            "Uzbekistan",
+            "Venezuela",
+            "Yemen",
+            "Houthis"
+        ],
+        "Wars": [
+            "",
+            "List",
+            "Iran\u2013Iraq War1982 Lebanon War1982 Ethiopian\u2013Somali Border WarSri Lankan Civil WarFirst Nagorno-Karabakh WarGulf War1991 Iraqi uprisingsGeorgian Civil WarCivil war in TajikistanSierra Leone Civil WarYugoslav WarsAlgerian Civil WarRwandan Civil WarFirst Chechen WarKargil WarSecond Chechen War2003 invasion of IraqRusso-Georgian WarFirst Libyan Civil WarSyrian Civil WarSouth Sudanese Civil WarWar in Iraq (2013\u20132017)Second Libyan Civil WarBoko Haram insurgency2016 Nagorno-Karabakh clashes2020 Nagorno-Karabakh warTigray WarRusso-Ukraine War",
+            ""
+        ],
+        "Designer": "Leonid Kartsev-Valeri Venediktov",
+        "Designed": "1967\u20131973",
+        "Manufacturer": [
+            "Uralvagonzavod",
+            "Heavy Vehicles Factory"
+        ],
+        "Unit\u00a0cost": [
+            "US$0.5\u20131.2 million in 1994\u20131996",
+            "30",
+            "962",
+            "000\u201361",
+            "924",
+            "000 rubles (US$1\u20132 million) in 2009",
+            "[citation needed] US$0.5 million in 2011"
+        ],
+        "Produced": "1968\u2013present",
+        "No.\u00a0built": [
+            "approx. 25",
+            "000"
+        ],
+        "Mass": [
+            "46.5 tonnes (51.3 short tons)",
+            "47.5 tonnes (52.4 short tons) (T-72B)"
+        ],
+        "Length": [
+            "9.73 m (31 ft 11 in) gun forward",
+            "7.05 m (23 ft 2 in) hull"
+        ],
+        "Width": "3.89 m (12 ft 9 in)",
+        "Height": "2.73 m (8 ft 11 in)",
+        "Crew": [
+            "3 (commander",
+            "gunner",
+            "driver)"
+        ],
+        "Armour": "Steel and composite armour with ERA",
+        "Mainarmament": "125 mm 2A46M/2A46M-5 smoothbore gun",
+        "Secondaryarmament": [
+            "7.62 mm PKT coax. machine gun",
+            "12.7 mm NSVT or DShK anti-aircraft machine gun"
+        ],
+        "Engine": [
+            "V12 dieselV-92S2F (T-72B3 & T-72B3M)780 hp (580 kW)1",
+            "130 hp (840 kW) for V-92S2F"
+        ],
+        "Power/weight": "18.8 hp/tonne (14 kW/tonne)",
+        "Transmission": [
+            "Synchromesh",
+            "hydraulically assisted",
+            "with 7 forward and 1 reverse gears"
+        ],
+        "Suspension": "Torsion bar",
+        "Ground\u00a0clearance": "0.49 m (19 in)",
+        "Fuel\u00a0capacity": [
+            "1",
+            "200 L (320 U.S. gal; 260 imp gal)"
+        ],
+        "Operationalrange": [
+            "460 km (290 mi)",
+            "700 km (430 mi) with fuel drums"
+        ],
+        "Maximum speed ": [
+            "60 to 75 km/h (37 to 47 mph)",
+            "4 km/h (2.5 mph) (reverse)"
+        ]
+    },
+    {
+        "Name": "T-80",
+        "Type": "Main battle tank",
+        "Place\u00a0of\u00a0origin": "Soviet Union",
+        "In\u00a0service": "1976\u2013present",
+        "Used\u00a0by": [
+            "Cyprus",
+            "Pakistan",
+            "Russia",
+            "Egypt",
+            "South Korea",
+            "Ukraine",
+            "Uzbekistan",
+            "Yemen"
+        ],
+        "Wars": [
+            "",
+            "August Coup",
+            "1993 Russian constitutional crisis",
+            "First Chechen War",
+            "Yemeni Civil War",
+            "Russo-Ukrainian War",
+            "Russian invasion of Ukraine",
+            "Wagner Group rebellion",
+            ""
+        ],
+        "Designer": [
+            "Nikolay Popov",
+            "LKZ (T-80) KMDB (T-80UD)"
+        ],
+        "Designed": "1967\u20131975",
+        "Manufacturer": [
+            "LKZ and Omsk Transmash",
+            "RussiaMalyshev Factory",
+            "Ukraine"
+        ],
+        "Unit\u00a0cost": "USD $3 million",
+        "Produced": "1975\u20132001; 2024? (T-80)1987\u2013present (T-80UD)",
+        "No.\u00a0built": "5500+ [needs update]",
+        "Variants": [
+            "Engineering & recovery",
+            "mobile bridge",
+            "mine-plough with KMT-6 plough-type system and KMT-7 roller-type system."
+        ],
+        "Mass": [
+            "42.5 tons (T-80B)",
+            "46 tons (T-80U)"
+        ],
+        "Length": [
+            "9.9 m (32 ft 6 in) T-80B",
+            "9.654 m (31 ft 8.1 in) T-80U (gun forward)7.4 m (24 ft 3 in) T-80B",
+            "7 m (23 ft 0 in) T-80U",
+            "(hull)"
+        ],
+        "Width": "3.4 m (11 ft 2 in) T-80B3.603 m (11 ft 9.9 in) T-80U",
+        "Height": [
+            "2.202 m (7 ft 2.7 in) T-80B",
+            "T-80U"
+        ],
+        "Crew": "3",
+        "Armour": [
+            "",
+            "T-80B \u2013 Hull 440\u2013450 mm vs APFSDS 500\u2013575 mm vs HEAT, Turret 500 mm vs APFSDS 650 mm vs HEAT",
+            "T-80U \u2013 Hull & Turret with Kontakt-5 780 mm vs APFSDS 1,320 mm vs HEAT",
+            ""
+        ],
+        "Mainarmament": [
+            "Smoothbore 125 mm 2A46-2 gun",
+            "36 rounds and 4 9M112 Kobra ATGMs (T-80B)2A46M-1 with 45 rounds and 6 9M119 Refleks ATGMs (T-80U)"
+        ],
+        "Secondaryarmament": [
+            "7.62 mm PKT coax MG",
+            "12.7 mm NSVT or DShK or PKT antiaircraft MG"
+        ],
+        "Engine": [
+            "SG-1000 gas turbine T-80B",
+            "GTD-1250 turbine T-80U",
+            "or one of 3 diesel T-80UD1",
+            "000 hp T-80B",
+            "1",
+            "250 hp T-80U"
+        ],
+        "Power/weight": "23.5 hp (17.6 kW) / tonne T-80B27.2 hp (20.3 kW) / tonne T-80U",
+        "Transmission": [
+            "manual",
+            "5 forward gears",
+            "1 reverse T-80B",
+            "4 forward",
+            "1 reverse T-80U"
+        ],
+        "Suspension": "torsion bar",
+        "Ground\u00a0clearance": [
+            "0.38 m (1.2 ft) T-80B",
+            "0.446 m (1.46 ft) T-80U"
+        ],
+        "Fuel\u00a0capacity": [
+            "1",
+            "100 litres (240 imp gal) (internal)740 litres (160 imp gal) (external)"
+        ],
+        "Operationalrange": [
+            "335 km (208 mi) (road",
+            "without external tanks)415 km (258 mi) (road",
+            "with external tanks)"
+        ],
+        "Maximum speed ": "80 km/h (50 mph) (T-80U)48 km/h (30 mph) (cross country)"
+    },
+    {
+        "Name": "T-90",
+        "Type": "Main battle tank",
+        "Place\u00a0of\u00a0origin": "Russia",
+        "In\u00a0service": [
+            "From 1992 (T-90)-",
+            "From 2004 (T-90A)",
+            "From 2016 (T-90M)",
+            "From 2017 (T-90MS)"
+        ],
+        "Used\u00a0by": [
+            "Algeria",
+            "Armenia",
+            "Azerbaijan",
+            "India",
+            "Iraq",
+            "Russia",
+            "Syria",
+            "Turkmenistan",
+            "Uganda",
+            "Ukraine",
+            "Vietnam"
+        ],
+        "Wars": [
+            "War of Dagestan[a]Syrian Civil WarWar in DonbasSecond Nagorno-Karabakh WarRusso-Ukrainian War",
+            "Wagner Group rebellion",
+            ""
+        ],
+        "Designer": "Kartsev-Venediktov",
+        "Manufacturer": [
+            "Uralvagonzavod",
+            "Heavy Vehicles Factory"
+        ],
+        "Unit\u00a0cost": [
+            "USD 2.5 million in 1999",
+            "USD 2.77\u20134.25 million in 2011 (varies by source)T-90SM: USD 4.5 million in 2016"
+        ],
+        "Produced": "1992\u2013present",
+        "No.\u00a0built": [
+            "~4",
+            "000 (2023",
+            "see Operators)1",
+            "400 units of T-90S/SM built in India under license   >1000 delivered to other countries"
+        ],
+        "Mass": "46 tonnes (45 long tons; 51 short tons) (T-90)46.5 tonnes (45.8 long tons; 51.3 short tons) (T-90A)48 tonnes (47 long tons; 53 short tons) (T-90SM)",
+        "Length": [
+            "9.63 m (31 ft 7 in)",
+            "6.86 m (22 ft 6 in) (hull)"
+        ],
+        "Width": "3.78 m (12 ft 5 in)",
+        "Height": "2.22 m (7 ft 3 in)",
+        "Crew": "3",
+        "Armor": [
+            "Steel-composite-reactive blend APFSDS: 550 mm + 250\u2013280 mm with Kontakt-5 = 800\u2013830 mm",
+            "HEAT: 650\u2013850 mm + 500\u2013700 mm with Kontakt-5 = 1,150\u20131,550 mm"
+        ],
+        "Mainarmament": [
+            "2A46M 125 mm smoothbore gun with 43 rounds (T-90)",
+            "2A46M-2 125 mm smoothbore gun with 42 rounds (T-90A)2A46M-5 125 mm smoothbore gun with 43 rounds (T-90M)"
+        ],
+        "Secondaryarmament": [
+            "12.7mm Kord Heavy machine gun",
+            "7.62mm PKMT"
+        ],
+        "Engine": "V-84MS 12-cyl. diesel (T-90)V-92S2 12-cyl. diesel (T-90A)V-92S2F840 hp (617 kW) for V-84MS 12-cyl. diesel engine1000 hp (736 kW) for V-92S2 12-cyl. diesel engine (T-90A and T-90S)1130 hp (831 kW) for V-92S2F (T-90M and T-90MS)",
+        "Power/weight": [
+            "18.2 hp/tonne (13.3 kW/tonne) (T-90)",
+            "21.5hp/tonne (15 kW/tonne) (T-90A)"
+        ],
+        "Suspension": "Torsion bar",
+        "Operationalrange": "550 km (340 mi) (without fuel drums)",
+        "Maximum speed ": "60 km/h (37 mph) (T-90A and T-90MS)"
+    },
+    {
+        "Name": "T-54",
+        "Type": "Medium tank/Main battle tank",
+        "Place\u00a0of\u00a0origin": "Soviet Union",
+        "In\u00a0service": "1947\u2013present",
+        "Designer": [
+            "Morozov (T-54)",
+            "OKB-520 (T-54A and later)"
+        ],
+        "Designed": "1945",
+        "Manufacturer": [
+            "KhPZ",
+            "UVZ (USSR)",
+            "Bumar-\u0141ab\u0119dy (Poland)",
+            "ZTS Martin (Slovakia)"
+        ],
+        "Produced": "1946\u201381 (USSR) 1956\u201379 (Poland) 1957\u201383 (Slovakia)",
+        "No.\u00a0built": [
+            "96",
+            "000\u2013100",
+            "000 est."
+        ]
+    },
+    {
+        "Name": "T-62",
+        "Type": "Main battle tank",
+        "Place\u00a0of\u00a0origin": "Soviet Union",
+        "In\u00a0service": "1961\u2013present",
+        "Used\u00a0by": [
+            "Afghanistan",
+            "Algeria",
+            "Angola",
+            "Cuba",
+            "Egypt",
+            "Ethiopia",
+            "Iran",
+            "Kurdistan Region",
+            "Libya",
+            "North Korea",
+            "Russia",
+            "Sahrawi Arab Democratic Republic"
+        ],
+        "Wars": "See combat history",
+        "Designer": "OKB-520 design bureau",
+        "Manufacturer": "Uralvagonzavod",
+        "Unit\u00a0cost": [
+            "US$300",
+            "000 (export price to Egypt",
+            "1972)"
+        ],
+        "Produced": "1961\u20131975 (USSR) ~1980s (North Korea)",
+        "No.\u00a0built": [
+            "More than 22",
+            "700"
+        ],
+        "Mass": "37 t (41 short tons; 36 long tons)",
+        "Length": "9.34 m (30 ft 8 in) with barrel in forward position  6.63 m (21 ft 9 in) hull only",
+        "Width": "3.30 m (10 ft 10 in)",
+        "Height": "2.40 m (7 ft 10 in)",
+        "Crew": [
+            "4 (commander",
+            "driver",
+            "gunner",
+            "loader)"
+        ],
+        "Armour": "Cast turret  214 (242 after 1972) mm turret front  153 mm turret sides  97 mm turret rear  40 mm turret roof Hull102 mm at 60\u00b0 hull front  79 mm hull upper sides  15 mm hull lower sides  46 mm at 0\u00b0 hull rear  20 mm hull bottom  31 mm hull roof",
+        "Mainarmament": "115 mm U-5TS (2A20) smoothbore gun",
+        "Secondaryarmament": "7.62 mm PKT coaxial general-purpose machine gun (2500 rounds)  12.7 mm DShK 1938/46 antiaircraft heavy machine gun (optional until T-62 Obr.1972)",
+        "Engine": "V-55V (based on the Kharkiv model V-2)580 (later 620) hp.",
+        "Power/weight": "14.5 hp/tonne (10.8 kW/tonne)",
+        "Suspension": "torsion bar",
+        "Ground\u00a0clearance": "425 mm (16.7 in)",
+        "Fuel\u00a0capacity": "960 L  1360 L with two 200-liter extra fuel tanks",
+        "Operationalrange": "450 km (280 mi) on road (650 km (400 mi) with two 200 L (53 US gal; 44 imp gal) extra fuel tanks)  320 km (200 mi) cross-country (450 km (280 mi) with two 200-liter extra fuel tanks)",
+        "Maximum speed ": "50 km/h (31 mph) (road)  40 km/h (25 mph) (cross country)"
+    },
+    {
+        "Name": "T-64",
+        "Type": "Main battle tank",
+        "Place\u00a0of\u00a0origin": "Soviet Union",
+        "In\u00a0service": "1966\u2013present",
+        "Used\u00a0by": [
+            "Democratic Republic of the Congo",
+            "",
+            "Russia",
+            "Ukraine",
+            "",
+            "",
+            "Uzbekistan"
+        ],
+        "Wars": [
+            "",
+            "Transnistria War",
+            "Angolan Civil War",
+            "Russo-Ukrainian War",
+            "War in Donbass",
+            "2022 Russian invasion of Ukraine",
+            ""
+        ],
+        "Designer": "KMDB",
+        "Designed": "1951\u20131962",
+        "Manufacturer": "Malyshev Factory",
+        "Produced": "1963\u20131987",
+        "No.\u00a0built": [
+            "\u224813",
+            "000"
+        ],
+        "Mass": "38 tonnes (42 short tons; 37 long tons)",
+        "Length": "9.225 m (30 ft 3.2 in) (gun forward)",
+        "Width": "3.415 m (11 ft 2.4 in)",
+        "Height": "2.172 m (7 ft 1.5 in)",
+        "Crew": [
+            "3 (driver",
+            "commander",
+            "gunner)"
+        ],
+        "Armour": [
+            "Glass-reinforced plastic sandwiched between layers of steel.",
+            "ERA plates on later versions",
+            "",
+            "Hull & turret \u2013 370 mm to 440 mm vs APFSDS500 mm to 575 mm vs HEAT"
+        ],
+        "Mainarmament": [
+            "125\u2009mm smoothbore gun 2A26(M/M-1) (T-64A)",
+            "125\u2009mm smoothbore gun D-81T (aka 2A46)"
+        ],
+        "Secondaryarmament": [
+            "7.62\u2009mm PKMT coaxial machine gun",
+            "12.7\u2009mm NSVT anti-aircraft machine gun"
+        ],
+        "Engine": "5TDF 5-cylinder diesel 13.6 litre700\u2009hp (522\u2009kW)",
+        "Power/weight": "18.4\u2009hp/tonne (13.7\u2009kW/ton)",
+        "Suspension": "Torsion bar",
+        "Operationalrange": [
+            "500 km (310 mi)",
+            "700 km (430 mi) with external tanks"
+        ],
+        "Maximum speed ": "45\u201360 km/h (28\u201337 mph) depending on version"
+    },
+    {
+        "Name": "T-72",
+        "Type": "Main battle tank",
+        "Place\u00a0of\u00a0origin": "Soviet Union",
+        "In\u00a0service": "1973\u2013present",
+        "Used\u00a0by": [
+            "Algeria",
+            "Angola",
+            "Armenia",
+            "Azerbaijan",
+            "Belarus",
+            "Bulgaria",
+            "Canada",
+            "Czech Republic",
+            "Democratic Republic of the Congo",
+            "Ethiopia",
+            "Georgia",
+            "Hungary",
+            "India",
+            "Iran",
+            "Iraq",
+            "Kurdistan",
+            "Kazakhstan",
+            "Kenya",
+            "Kyrgyzstan",
+            "Laos",
+            "Libya",
+            "Malaysia",
+            "Morocco",
+            "Mongolia",
+            "Myanmar",
+            "Nicaragua",
+            "Nigeria",
+            "North Korea",
+            "North Macedonia",
+            "Poland",
+            "Russia",
+            "Slovakia",
+            "Serbia",
+            "South Sudan",
+            "Sudan",
+            "South Ossetia",
+            "Syria",
+            "Syrian Democratic Forces",
+            "Tajikistan",
+            "Turkmenistan",
+            "Uganda",
+            "Ukraine",
+            "Russian separatist forces in Donbas",
+            "Uzbekistan",
+            "Venezuela",
+            "Yemen",
+            "Houthis"
+        ],
+        "Wars": [
+            "",
+            "List",
+            "Iran\u2013Iraq War1982 Lebanon War1982 Ethiopian\u2013Somali Border WarSri Lankan Civil WarFirst Nagorno-Karabakh WarGulf War1991 Iraqi uprisingsGeorgian Civil WarCivil war in TajikistanSierra Leone Civil WarYugoslav WarsAlgerian Civil WarRwandan Civil WarFirst Chechen WarKargil WarSecond Chechen War2003 invasion of IraqRusso-Georgian WarFirst Libyan Civil WarSyrian Civil WarSouth Sudanese Civil WarWar in Iraq (2013\u20132017)Second Libyan Civil WarBoko Haram insurgency2016 Nagorno-Karabakh clashes2020 Nagorno-Karabakh warTigray WarRusso-Ukraine War",
+            ""
+        ],
+        "Designer": "Leonid Kartsev-Valeri Venediktov",
+        "Designed": "1967\u20131973",
+        "Manufacturer": [
+            "Uralvagonzavod",
+            "Heavy Vehicles Factory"
+        ],
+        "Unit\u00a0cost": [
+            "US$0.5\u20131.2 million in 1994\u20131996",
+            "30",
+            "962",
+            "000\u201361",
+            "924",
+            "000 rubles (US$1\u20132 million) in 2009",
+            "[citation needed] US$0.5 million in 2011"
+        ],
+        "Produced": "1968\u2013present",
+        "No.\u00a0built": [
+            "approx. 25",
+            "000"
+        ],
+        "Mass": [
+            "46.5 tonnes (51.3 short tons)",
+            "47.5 tonnes (52.4 short tons) (T-72B)"
+        ],
+        "Length": [
+            "9.73 m (31 ft 11 in) gun forward",
+            "7.05 m (23 ft 2 in) hull"
+        ],
+        "Width": "3.89 m (12 ft 9 in)",
+        "Height": "2.73 m (8 ft 11 in)",
+        "Crew": [
+            "3 (commander",
+            "gunner",
+            "driver)"
+        ],
+        "Armour": "Steel and composite armour with ERA",
+        "Mainarmament": "125 mm 2A46M/2A46M-5 smoothbore gun",
+        "Secondaryarmament": [
+            "7.62 mm PKT coax. machine gun",
+            "12.7 mm NSVT or DShK anti-aircraft machine gun"
+        ],
+        "Engine": [
+            "V12 dieselV-92S2F (T-72B3 & T-72B3M)780 hp (580 kW)1",
+            "130 hp (840 kW) for V-92S2F"
+        ],
+        "Power/weight": "18.8 hp/tonne (14 kW/tonne)",
+        "Transmission": [
+            "Synchromesh",
+            "hydraulically assisted",
+            "with 7 forward and 1 reverse gears"
+        ],
+        "Suspension": "Torsion bar",
+        "Ground\u00a0clearance": "0.49 m (19 in)",
+        "Fuel\u00a0capacity": [
+            "1",
+            "200 L (320 U.S. gal; 260 imp gal)"
+        ],
+        "Operationalrange": [
+            "460 km (290 mi)",
+            "700 km (430 mi) with fuel drums"
+        ],
+        "Maximum speed ": [
+            "60 to 75 km/h (37 to 47 mph)",
+            "4 km/h (2.5 mph) (reverse)"
+        ]
+    },
+    {
+        "Name": "T-80",
+        "Type": "Main battle tank",
+        "Place\u00a0of\u00a0origin": "Soviet Union",
+        "In\u00a0service": "1976\u2013present",
+        "Used\u00a0by": [
+            "Cyprus",
+            "Pakistan",
+            "Russia",
+            "Egypt",
+            "South Korea",
+            "Ukraine",
+            "Uzbekistan",
+            "Yemen"
+        ],
+        "Wars": [
+            "",
+            "August Coup",
+            "1993 Russian constitutional crisis",
+            "First Chechen War",
+            "Yemeni Civil War",
+            "Russo-Ukrainian War",
+            "Russian invasion of Ukraine",
+            "Wagner Group rebellion",
+            ""
+        ],
+        "Designer": [
+            "Nikolay Popov",
+            "LKZ (T-80) KMDB (T-80UD)"
+        ],
+        "Designed": "1967\u20131975",
+        "Manufacturer": [
+            "LKZ and Omsk Transmash",
+            "RussiaMalyshev Factory",
+            "Ukraine"
+        ],
+        "Unit\u00a0cost": "USD $3 million",
+        "Produced": "1975\u20132001; 2024? (T-80)1987\u2013present (T-80UD)",
+        "No.\u00a0built": "5500+ [needs update]",
+        "Variants": [
+            "Engineering & recovery",
+            "mobile bridge",
+            "mine-plough with KMT-6 plough-type system and KMT-7 roller-type system."
+        ],
+        "Mass": [
+            "42.5 tons (T-80B)",
+            "46 tons (T-80U)"
+        ],
+        "Length": [
+            "9.9 m (32 ft 6 in) T-80B",
+            "9.654 m (31 ft 8.1 in) T-80U (gun forward)7.4 m (24 ft 3 in) T-80B",
+            "7 m (23 ft 0 in) T-80U",
+            "(hull)"
+        ],
+        "Width": "3.4 m (11 ft 2 in) T-80B3.603 m (11 ft 9.9 in) T-80U",
+        "Height": [
+            "2.202 m (7 ft 2.7 in) T-80B",
+            "T-80U"
+        ],
+        "Crew": "3",
+        "Armour": [
+            "",
+            "T-80B \u2013 Hull 440\u2013450 mm vs APFSDS 500\u2013575 mm vs HEAT, Turret 500 mm vs APFSDS 650 mm vs HEAT",
+            "T-80U \u2013 Hull & Turret with Kontakt-5 780 mm vs APFSDS 1,320 mm vs HEAT",
+            ""
+        ],
+        "Mainarmament": [
+            "Smoothbore 125 mm 2A46-2 gun",
+            "36 rounds and 4 9M112 Kobra ATGMs (T-80B)2A46M-1 with 45 rounds and 6 9M119 Refleks ATGMs (T-80U)"
+        ],
+        "Secondaryarmament": [
+            "7.62 mm PKT coax MG",
+            "12.7 mm NSVT or DShK or PKT antiaircraft MG"
+        ],
+        "Engine": [
+            "SG-1000 gas turbine T-80B",
+            "GTD-1250 turbine T-80U",
+            "or one of 3 diesel T-80UD1",
+            "000 hp T-80B",
+            "1",
+            "250 hp T-80U"
+        ],
+        "Power/weight": "23.5 hp (17.6 kW) / tonne T-80B27.2 hp (20.3 kW) / tonne T-80U",
+        "Transmission": [
+            "manual",
+            "5 forward gears",
+            "1 reverse T-80B",
+            "4 forward",
+            "1 reverse T-80U"
+        ],
+        "Suspension": "torsion bar",
+        "Ground\u00a0clearance": [
+            "0.38 m (1.2 ft) T-80B",
+            "0.446 m (1.46 ft) T-80U"
+        ],
+        "Fuel\u00a0capacity": [
+            "1",
+            "100 litres (240 imp gal) (internal)740 litres (160 imp gal) (external)"
+        ],
+        "Operationalrange": [
+            "335 km (208 mi) (road",
+            "without external tanks)415 km (258 mi) (road",
+            "with external tanks)"
+        ],
+        "Maximum speed ": "80 km/h (50 mph) (T-80U)48 km/h (30 mph) (cross country)"
+    },
+    {
+        "Name": "T-84",
+        "Type": "Main battle tank",
+        "Place\u00a0of\u00a0origin": "Ukraine",
+        "In\u00a0service": "1999\u2013present",
+        "Used\u00a0by": [],
+        "Wars": [
+            "Russo-Ukrainian War",
+            "War in Donbas",
+            "Russian invasion of Ukraine",
+            ""
+        ],
+        "Designer": "KMDB",
+        "Designed": "1975\u20131994",
+        "Manufacturer": "Malyshev Factory",
+        "Produced": "1994\u2013present",
+        "Mass": "46 tonnes",
+        "Length": "7.086 m (23 ft 3 in)",
+        "Width": "3.775 m (12 ft 5 in)",
+        "Height": "2.215 m (7 ft 3 in)",
+        "Crew": "3",
+        "Elevation": [
+            "+13\u00b0",
+            "-6\u00b0"
+        ],
+        "Armour": [
+            "Steel",
+            "composite",
+            "ERA"
+        ],
+        "Mainarmament": "125 mm smoothbore KBA-3 cannon  (43 rds) 120 mm smoothbore gun (40 rds)",
+        "Secondaryarmament": "7.62 mm KT-7.62 coaxial machine gun12.7 mm KT-12.7 anti-aircraft machine gun",
+        "Engine": [
+            "KMDB 6TD-2 6-cylinder diesel 16.3 litre1",
+            "200 hp (890 kW)"
+        ],
+        "Power/weight": "26 hp/tonne",
+        "Suspension": [
+            "Torsion bars",
+            "hydraulic dampers"
+        ],
+        "Ground\u00a0clearance": "0.515 m (1 ft 8.3 in)",
+        "Fuel\u00a0capacity": [
+            "1",
+            "300 L (290 imp gal; 340 US gal)"
+        ],
+        "Operationalrange": "540 km (340 mi)",
+        "Maximum speed ": "65 km/h (40 mph) \u2013 70 km/h (43 mph)"
+    },
+    {
+        "Name": "T-90",
+        "Type": "Main battle tank",
+        "Place\u00a0of\u00a0origin": "Russia",
+        "In\u00a0service": [
+            "From 1992 (T-90)-",
+            "From 2004 (T-90A)",
+            "From 2016 (T-90M)",
+            "From 2017 (T-90MS)"
+        ],
+        "Used\u00a0by": [
+            "Algeria",
+            "Armenia",
+            "Azerbaijan",
+            "India",
+            "Iraq",
+            "Russia",
+            "Syria",
+            "Turkmenistan",
+            "Uganda",
+            "Ukraine",
+            "Vietnam"
+        ],
+        "Wars": [
+            "War of Dagestan[a]Syrian Civil WarWar in DonbasSecond Nagorno-Karabakh WarRusso-Ukrainian War",
+            "Wagner Group rebellion",
+            ""
+        ],
+        "Designer": "Kartsev-Venediktov",
+        "Manufacturer": [
+            "Uralvagonzavod",
+            "Heavy Vehicles Factory"
+        ],
+        "Unit\u00a0cost": [
+            "USD 2.5 million in 1999",
+            "USD 2.77\u20134.25 million in 2011 (varies by source)T-90SM: USD 4.5 million in 2016"
+        ],
+        "Produced": "1992\u2013present",
+        "No.\u00a0built": [
+            "~4",
+            "000 (2023",
+            "see Operators)1",
+            "400 units of T-90S/SM built in India under license   >1000 delivered to other countries"
+        ],
+        "Mass": "46 tonnes (45 long tons; 51 short tons) (T-90)46.5 tonnes (45.8 long tons; 51.3 short tons) (T-90A)48 tonnes (47 long tons; 53 short tons) (T-90SM)",
+        "Length": [
+            "9.63 m (31 ft 7 in)",
+            "6.86 m (22 ft 6 in) (hull)"
+        ],
+        "Width": "3.78 m (12 ft 5 in)",
+        "Height": "2.22 m (7 ft 3 in)",
+        "Crew": "3",
+        "Armor": [
+            "Steel-composite-reactive blend APFSDS: 550 mm + 250\u2013280 mm with Kontakt-5 = 800\u2013830 mm",
+            "HEAT: 650\u2013850 mm + 500\u2013700 mm with Kontakt-5 = 1,150\u20131,550 mm"
+        ],
+        "Mainarmament": [
+            "2A46M 125 mm smoothbore gun with 43 rounds (T-90)",
+            "2A46M-2 125 mm smoothbore gun with 42 rounds (T-90A)2A46M-5 125 mm smoothbore gun with 43 rounds (T-90M)"
+        ],
+        "Secondaryarmament": [
+            "12.7mm Kord Heavy machine gun",
+            "7.62mm PKMT"
+        ],
+        "Engine": "V-84MS 12-cyl. diesel (T-90)V-92S2 12-cyl. diesel (T-90A)V-92S2F840 hp (617 kW) for V-84MS 12-cyl. diesel engine1000 hp (736 kW) for V-92S2 12-cyl. diesel engine (T-90A and T-90S)1130 hp (831 kW) for V-92S2F (T-90M and T-90MS)",
+        "Power/weight": [
+            "18.2 hp/tonne (13.3 kW/tonne) (T-90)",
+            "21.5hp/tonne (15 kW/tonne) (T-90A)"
+        ],
+        "Suspension": "Torsion bar",
+        "Operationalrange": "550 km (340 mi) (without fuel drums)",
+        "Maximum speed ": "60 km/h (37 mph) (T-90A and T-90MS)"
+    },
+    {
+        "Name": "PT-91 Twardy",
+        "Type": "Main battle tank",
+        "Place\u00a0of\u00a0origin": "Poland",
+        "Used\u00a0by": [
+            "Poland"
+        ],
+        "Wars": "Russo-Ukrainian War",
+        "Manufacturer": "Bumar-\u0141ab\u0119dy",
+        "No.\u00a0built": "Around 285",
+        "Mass": "45.9 tonnes",
+        "Length": "6.95 m (9.67 with barrel in forward position)",
+        "Width": "3.59 m",
+        "Height": "2.19 m",
+        "Crew": "3",
+        "Armor": [
+            "Composite armour; front and side armour laminated; front",
+            "side and top armour behind Erawa-1/Erawa-2 ERA",
+            "steel side anti-cumulative screens"
+        ],
+        "Mainarmament": "1 \u00d7 125 mm 2A46 (D-81TM) gun (42 rounds)",
+        "Secondaryarmament": [
+            "1 \u00d7 7.62mm PKT coaxial general-purpose machine gun (2",
+            "000 rounds)  1 \u00d7 12.7 mm NSVT heavy machine gun (300 rounds)"
+        ],
+        "Engine": "PZL-Wola S-12U diesel850 hp (630 kW)",
+        "Power/weight": "18.5 hp/tonne (13.8 kW/tonne)",
+        "Transmission": "Manual",
+        "Suspension": "torsion-bar",
+        "Ground\u00a0clearance": "395 mm",
+        "Fuel\u00a0capacity": [
+            "1",
+            "000 L"
+        ],
+        "Operationalrange": "650 km (700 km with extra fuel tanks)",
+        "Maximum speed ": "60 km/h"
+    },
+    {
+        "Name": "Kampfpanzer Leopard 1",
+        "Type": "Main battle tank",
+        "Place\u00a0of\u00a0origin": "West Germany",
+        "In\u00a0service": "1965\u2013present",
+        "Wars": [
+            "",
+            "Bosnian War",
+            "Kurdish\u2013Turkish conflict",
+            "War in Afghanistan",
+            "Russian invasion of Ukraine",
+            ""
+        ],
+        "Designer": "Porsche",
+        "Designed": "1956\u20131961",
+        "Manufacturer": "KraussMaffeiOTO Melara",
+        "Produced": "1965\u20131984",
+        "No.\u00a0built": [
+            "6565",
+            "4744 main battle tanks1741 utility and anti-aircraft vehicles80 prototypes and pre-series vehicles"
+        ],
+        "Mass": "42.2 tonnes (increased on later models from original 40 tonnes)",
+        "Length": "9.54/8.29 m (gun forward/rearward)",
+        "Width": "3.37 m",
+        "Height": "2.39/2.7 m (turret roof/absolute)",
+        "Crew": [
+            "4 (commander",
+            "driver",
+            "gunner",
+            "radio operator/loader)"
+        ],
+        "Armour": "Steel: 10\u201370 mm RHAe",
+        "Mainarmament": [
+            "1 \u00d7 105 mm Royal Ordnance L7A3 L/52 rifled gun",
+            "(13 rounds in turret 42 rounds in hull)"
+        ],
+        "Secondaryarmament": "2 \u00d7 7.62 mm MG 3 or FN MAG (co-axial and commander's hatch) (5500 rounds)",
+        "Engine": [
+            "MTU MB 838 CaM 500",
+            "10-cylinder",
+            "37.4 litres",
+            "multi-fuel engine830 PS (819 hp",
+            "610 kW) at 2",
+            "200 RPM"
+        ],
+        "Power/weight": "19.6 PS (14.5 kW) /tonne",
+        "Suspension": "Torsion bar",
+        "Operationalrange": [
+            "600 km (on road)",
+            "450 km (cross-country)"
+        ],
+        "Maximum speed ": "65 km/h"
+    },
+    {
+        "Name": "Leopard 2",
+        "Type": "Main battle tank",
+        "Place\u00a0of\u00a0origin": "West Germany",
+        "In\u00a0service": "1979\u2013present",
+        "Used\u00a0by": [
+            "Croatia",
+            "Italy",
+            "Lithuania"
+        ],
+        "Wars": "War in Afghanistan Syrian Civil War  Russo-Ukrainian War",
+        "Designer": "KraussMaffei",
+        "Designed": "1970s",
+        "Manufacturer": [
+            "",
+            "KraussMaffei",
+            "Maschinenbau Kiel",
+            "Rheinmetall",
+            "Santa B\u00e1rbara Sistemas",
+            "H\u00e4gglunds AB",
+            "Contraves",
+            "Hellenic Vehicle Industry",
+            ""
+        ],
+        "Unit\u00a0cost": "2A6 (secondhand): \u20ac5.74 million (FY 2007) 2A7+: \u20ac13\u201315 million (FY 2019) 2A8: \u20ac29 million (2023)",
+        "Produced": "1979\u2013present",
+        "No.\u00a0built": [
+            "3",
+            "600"
+        ],
+        "Variants": [],
+        "Mass": "2A6: 62.3 tonnes (68.7 short tons) 2A7V: 66.5 tonnes (73.3 short tons)",
+        "Length": "2A6: 9.97 metres (32.7 feet) (gun forward)",
+        "Width": "2A6: 3.75 m (12.3 ft)",
+        "Height": "2A6: 3 m (9.8 ft)",
+        "Crew": "4",
+        "Armor": [
+            "2A6: 3rd generation composite; including high-hardness steel",
+            "tungsten and plastic filler with ceramic component."
+        ],
+        "Mainarmament": "1 \u00d7 Rh-120 L/44 120 mm or Rh-120 L/55 120 mm Rheinmetall Rh-120 (42 rounds)",
+        "Secondaryarmament": [
+            "2 \u00d7 7.62 mm MG3A1 or 2 \u00d7 7.62 mm FN MAG (4",
+            "750 rounds)"
+        ],
+        "Engine": "MTU MB 873 Ka-501 liquid-cooled V12 twin-turbo diesel engine1100 kW at 2600 rpm",
+        "Power/weight": "2A6: 17.8 kW/t (24.2 PS/t) 2A7V: 16.6 kW/t (22.6 PS/t)",
+        "Transmission": "Renk HSWL 354",
+        "Suspension": "Torsion bar suspension",
+        "Fuel\u00a0capacity": [
+            "1",
+            "200 litres (264 imperial gallons; 317 US gallons)"
+        ],
+        "Operationalrange": [
+            "",
+            "Road: 340 km (210 mi)",
+            "Cross country: 220 km (140 mi)",
+            "Average: 280 km (170 mi)",
+            ""
+        ],
+        "Maximum speed ": "70 km/h (43 mph)"
+    },
+    {
+        "Name": "M1 Abrams",
+        "Type": "Main battle tank",
+        "Place\u00a0of\u00a0origin": "United States",
+        "In\u00a0service": "1980\u2013present",
+        "Used\u00a0by": [
+            "Australia",
+            "Egypt",
+            "Iraq",
+            "Kuwait",
+            "Poland",
+            "Saudi Arabia",
+            "Morocco",
+            "Taiwan"
+        ],
+        "Wars": [
+            "",
+            "Cold War",
+            "Gulf War",
+            "Global War on Terrorism",
+            "War in Afghanistan",
+            "Iraq War",
+            "Arab Spring",
+            "Egyptian Revolution of 2011",
+            "War in Iraq (2013\u20132017)",
+            "Yemeni Civil War (2014\u2013present)",
+            "Saudi Arabian-led intervention in Yemen",
+            "Russo-Ukrainian War",
+            "Russian invasion of Ukraine",
+            ""
+        ],
+        "Designer": "Chrysler Defense (now General Dynamics Land Systems)",
+        "Designed": "1972\u20131975",
+        "Manufacturer": [
+            "Lima Army Tank Plant (since 1980)Detroit Arsenal Tank Plant (1978",
+            "1982\u20131991)Egyptian Defense Company Tank Plant"
+        ],
+        "Unit\u00a0cost": [
+            "M1A1: $4.3 million (domestic cost",
+            "FY1989) (~$10.66 million",
+            "FY2023)M1A2 SEP v3: $24 million (export cost",
+            "FY2022)"
+        ],
+        "Produced": "1979\u20132016",
+        "No.\u00a0built": [
+            "approx. 10",
+            "300 as of 2017"
+        ],
+        "Variants": [],
+        "Mass": "M1: 60 short tons (54 t)M1A1: 63 short tons (57 t)M1A1 SA: 67.6 short tons (61.3 t)M1A2 SEP v2: 71.2 short tons (64.6 t)M1A2 SEP v3: 73.6 short tons (66.8 t)",
+        "Length": "Gun forward: 32.04 ft (9.77 m)Hull length: 26.02 ft (7.93 m)",
+        "Width": "12 ft (3.66 m)",
+        "Height": "8 ft (2.44 m)",
+        "Crew": [
+            "4 (commander",
+            "gunner",
+            "loader",
+            "driver)"
+        ],
+        "Elevation": "+20\u00b0 / -10\u00b0",
+        "Traverse": "9 seconds/360 degrees",
+        "Armor": "Composite armor",
+        "Mainarmament": "M1: 105 mm L/52 M68A1 rifled gun (55 rounds)M1A1: 120 mm L/44 M256 smoothbore gun (40 rounds)M1A2: 120 mm L/44 M256 smoothbore gun (42 rounds)",
+        "Secondaryarmament": [
+            "1 \u00d7 0.50 caliber (12.7 mm) M2HB heavy machine gun with 900 rounds2 \u00d7 7.62 mm (.308 in) M240 machine guns with 10",
+            "400 rounds (1 pintle-mounted",
+            "1 coaxial)"
+        ],
+        "Engine": [
+            "Honeywell AGT1500 multi-fuel turbine engine1",
+            "500 shp (1",
+            "120 kW)"
+        ],
+        "Power/weight": "From 26.9 hp/t (20.05 kW/t) to 23.8 hp/t (17.74 kW/t)",
+        "Transmission": "Allison DDA X-1100-3B",
+        "Suspension": "High-hardness-steel torsion bars with rotary shock absorbers",
+        "Ground\u00a0clearance": [
+            "M1",
+            "M1A1: 0.48 m (1.6 ft; 19 in)M1A2: 0.43 m (1 ft 5 in)"
+        ],
+        "Fuel\u00a0capacity": [
+            "504.4 US gallons (1",
+            "909 L)"
+        ],
+        "Operationalrange": [
+            "M1A2",
+            "road: 265 mi (426 km)Cross country: 93\u2013124 mi (150\u2013200 km)"
+        ],
+        "Maximum speed ": [
+            "M1A1",
+            "road: 45 mph (72 km/h) (governed);M1A2",
+            "road: 42 mph (67 km/h) (governed);Off-road: 25 mph (40 km/h)"
+        ]
+    },
+    {
+        "Name": "FV4034 Challenger 2",
+        "Type": "Main battle tank",
+        "Place\u00a0of\u00a0origin": "United Kingdom",
+        "In\u00a0service": "1998\u2013present",
+        "Used\u00a0by": [
+            "British Army",
+            "Royal Army of Oman",
+            "Ukrainian Ground Forces"
+        ],
+        "Wars": [
+            "Kosovo War",
+            "Bosnian War",
+            "Iraq War",
+            "Russo-Ukrainian War"
+        ],
+        "Designed": "1986\u20131993",
+        "Manufacturer": [
+            "Alvis plc",
+            "Vickers plc",
+            "BAE Systems Land & Armaments"
+        ],
+        "Unit\u00a0cost": [
+            "\u00a34",
+            "217",
+            "000 (FY 1999)"
+        ],
+        "Produced": [
+            "1990 (prototypes)",
+            "1993\u20132002 (main production)"
+        ],
+        "No.\u00a0built": "about 447",
+        "Mass": [
+            "64 t (63 long tons; 71 short tons)",
+            "75 t (74 long tons; 83 short tons) with combat armour modules"
+        ],
+        "Length": [
+            "8.3 m (27 ft 3 in)",
+            "13.5 m (44 ft 3 in) gun forward"
+        ],
+        "Width": [
+            "3.5 m (11 ft 6 in)",
+            "4.2 m (13 ft 9 in) with appliqu\u00e9 armour"
+        ],
+        "Height": "2.49 m (8 ft 2 in)",
+        "Crew": [
+            "4 (commander",
+            "gunner",
+            "loader\u2013operator",
+            "driver)"
+        ],
+        "Armour": "Chobham / Dorchester Level 2 (classified)",
+        "Mainarmament": "L30A1 120 mm rifled gun with 47 rounds",
+        "Secondaryarmament": [
+            "7.62 mm coaxial L94A1 chain gun",
+            "7.62 mm L37A2 loader\u2013operator hatch machine gun"
+        ],
+        "Engine": [
+            "Perkins CV12-6A V12 diesel26.1 L (1",
+            "590 cu in)1",
+            "200 bhp (890 kW)"
+        ],
+        "Power/weight": [
+            "18.7 hp/t (13.9 kW/t) at 64 t;",
+            "16 hp/t (11.9 kW/t) at 75 t"
+        ],
+        "Transmission": [
+            "David Brown TN54E epicyclic transmission (6 fwd.",
+            "2 rev.)"
+        ],
+        "Suspension": "Hydropneumatic",
+        "Ground\u00a0clearance": "0.5 m (1 ft 8 in)",
+        "Fuel\u00a0capacity": [
+            "1",
+            "592 litres (350 imp gal; 421 US gal)"
+        ],
+        "Operationalrange": [
+            "550 km (340 mi) on-road",
+            "250 km (160 mi) off-road on internal fuel"
+        ],
+        "Maximum speed ": [
+            "37 mph (59 km/h) on-road",
+            "25 mph (40 km/h) off-road"
+        ]
+    }
+]

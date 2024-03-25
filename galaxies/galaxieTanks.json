@@ -1,0 +1,13 @@
+{
+    "description": "Une galaxie de tank",
+    "icon": "Tank",
+    "authors": [
+        "ZANNIER Chlo\u00e9",
+        "ZIMMERMANN Julien"
+    ],
+    "name": "Tanks",
+    "namespace": "Tanks",
+    "type": "tanksList",
+    "uuid": "d3ef6082-7bae-437e-8e4e-46dfc222106c",
+    "version": 1
+}
