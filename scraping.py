@@ -174,11 +174,16 @@ def getTank(linkTank):
         return infosTank
 
 
+# Permet de créer un fichier JSON contenant l'ensemble des informations de chaque Tank
+# Le fichier JSON contient une liste, et un objet JSON par Tank
+# Ce fichier JSON sera stocké dans le dossier racine du projet
 def CreerJSONTanks(listTank,nomFichier):
     jsonTanks = json.dumps(listTank, indent=4)
     with open(nomFichier, 'w') as fichier:
         fichier.write(jsonTanks)
 
+# Permet de créer une galaxie MISP et de stocker cette galaxie dans un fichier JSON
+# Cette galaxie sera stockée dans le dossier "galaxies"
 def CreerGalaxie(nomFichier,description,icon,authors,name,namespace,type,uuid,version):
     json_galaxie = {
         "description" : description,
@@ -195,7 +200,10 @@ def CreerGalaxie(nomFichier,description,icon,authors,name,namespace,type,uuid,ve
     with open(chemin_fichier_json, 'w') as fichier:
         json.dump(json_galaxie, fichier, indent=4)
 
-def CreerCluster(nomFichier,authors,category,name,source,type,uuidCluster,fichierData):
+# Permet de créer un cluster lié à une Galaxie pour remplir la galaxie de nos données de Tank
+# Les données des Tanks seront lu à partir du fichier de la fonction CreerJSONTanks seront stocké dans la liste de la clé "values" puis dans l'objet ayant la clé "meta"
+# Ce cluster sera stocké dans le dossier "clusters"
+def CreerCluster(nomFichier,authors,category,name,source,typeCluster,uuidCluster,fichierData):
     chemin_clusters = os.path.join(os.getcwd(), "clusters")
     chemin_clusters_json = os.path.join(chemin_clusters, nomFichier)
     json_clusters = {
@@ -203,10 +211,9 @@ def CreerCluster(nomFichier,authors,category,name,source,type,uuidCluster,fichie
         "category" : category,
         "name" : name,
         "source" : source,
-        "type" : type,
+        "type" : typeCluster,
         "uuid" : uuidCluster
     }
-    #
     listMeta = []
     with open(fichierData, 'r') as fichier:
         listTanks = json.load(fichier)
