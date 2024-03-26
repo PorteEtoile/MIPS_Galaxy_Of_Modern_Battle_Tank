@@ -33,12 +33,12 @@ Dans notre fichier "scraping.py" nous avons tout d'abord :
 ## ClusterTanks.json
 - Modélisation du cluster lié à la galaxie au format JSON.
 - Définition de : 
-	- Les auteurs du cluster (ZANNIER Chloé et ZIMMERMANN Julien)
+  - Les auteurs du cluster (ZANNIER Chloé et ZIMMERMANN Julien)
   - Catégorie du cluster
   - Nom du cluster
   - Source du cluster
   - Type du cluster
-	- L'identifiant unique du cluster généré grâce au module "uuid" de python
+  - L'identifiant unique du cluster généré grâce au module "uuid" de python
   - La liste des données des tanks
 
 # Références
