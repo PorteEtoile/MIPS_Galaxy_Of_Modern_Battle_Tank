@@ -33,17 +33,31 @@ Dans notre fichier "scraping.py" nous avons tout d'abord :
 ## ClusterTanks.json
 - Modélisation du cluster lié à la galaxie au format JSON.
 - Définition de : 
-  - Les auteurs du cluster (ZANNIER Chloé et ZIMMERMANN Julien)
+	- Les auteurs du cluster (ZANNIER Chloé et ZIMMERMANN Julien)
   - Catégorie du cluster
   - Nom du cluster
   - Source du cluster
   - Type du cluster
-  - L'identifiant unique du cluster généré grâce au module "uuid" de python
-  - La liste des données des tanks
+	- L'identifiant unique du cluster généré grâce au module "uuid" de python
+	- La liste des données des tanks
 
 # Références
-Pour scrapper, nous avons utilisé la XXXX "Beautiful Soup" qui nous a permis de récupérer les informations isssues du Wikipédia ci-dessous
-https://en.wikipedia.org/wiki/List_of_Russo-Ukrainian_War_military_equipment
-Ce wikipédia référence chaque équipement, arme, véhicule utilisé par les forces armées russes ou ukrénienne. Nous nous sommes concentrés sur la catégorie des véhicules "chars".
+Pour scrapper et réaliser notre script, nous avons utilisé les modules python suivants :
+- "BeautifulSoup" qui nous a permis de récupérer les informations isssues de la page Wikipédia suivante : https://en.wikipedia.org/wiki/List_of_Russo-Ukrainian_War_military_equipment
+	Cette page wikipédia référence chaque équipement, arme, véhicule utilisé par les forces armées russes ou ukrénienne. Nous nous sommes concentrés sur la catégorie des véhicules "chars".
+- "uuid" qui nous a permis de générer des identifiants aléatoires pour la galaxie, les clusters et les données du cluster.
+- "json" pour la manipulation des fichiers JSON
+- "re" pour la gestion des regex (utilisé pour réaliser des cleans dans les données récupérées par le scraping)
+- "requests" pour réaliser des requêtes HTTP sur les pages wikipédia
+- "os" pour la gestion des dossiers et des fichiers
+
+# Axe d'améliorations et réalisations restantes
+ - Séparation dans deux camps bien distincts les tanks utilisés par l'armée ukrainienne et ceux utilisés par l'armée russe.
+ 	Actuellement, nous récupérons tous les tanks utilisés pendant la guerre et nous listons seulement les opérateurs au niveau mondial.
+- Correctement clean le parsage des données : Dû à la différence du format de données selon les pages wikipédia, nous avons pas prévu tous les cas possible.
+- Récupérer lors du parsage, les différents types de variants de chaque type : ATTENTION, le parsage aura les même problèmes rencontrés lors du passage des opérateurs
+- Intégration à MISP pour une réelle utilisation
+ 
+ 
 
 Il existe d'autres sites qui référencent les chars par pays, comme [military factory](https://www.militaryfactory.com/).

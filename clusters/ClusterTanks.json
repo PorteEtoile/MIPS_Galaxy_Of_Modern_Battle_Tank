@@ -3,11 +3,11 @@
         "ZANNIER Chlo\u00e9",
         "ZIMMERMANN Julien"
     ],
-    "category": "Tank",
-    "name": "Tank",
-    "source": "blabla",
-    "type": "Tank",
-    "uuid": "5595c13e-a416-41b9-b9fe-71dd960e6d36",
+    "category": "Tanks",
+    "name": "Tanks",
+    "source": "https://en.wikipedia.org/wiki/List_of_Russo-Ukrainian_War_military_equipment",
+    "type": "Tanks",
+    "uuid": "406fd2d7-fdf0-4ec8-af60-3ec65c868df1",
     "values": [
         {
             "meta": {
@@ -199,7 +199,7 @@
                 ],
                 "Maximum speed ": "51 kilometres per hour (32 mph)"
             },
-            "uuid": "908e9d11-2ed6-4071-b521-8e9f5025fc15",
+            "uuid": "3df7a8e2-b8a8-4c97-b0bd-e587dca43869",
             "value": "T-54/55"
         },
         {
@@ -256,7 +256,7 @@
                 "Operationalrange": "450 km (280 mi) on road (650 km (400 mi) with two 200 L (53 US gal; 44 imp gal) extra fuel tanks)  320 km (200 mi) cross-country (450 km (280 mi) with two 200-liter extra fuel tanks)",
                 "Maximum speed ": "50 km/h (31 mph) (road)  40 km/h (25 mph) (cross country)"
             },
-            "uuid": "5c1ecb03-3d44-4806-9222-f991d3c0abcc",
+            "uuid": "93175dcf-168a-4216-b8ca-1c03afbfcd96",
             "value": "T-62"
         },
         {
@@ -323,7 +323,7 @@
                 ],
                 "Maximum speed ": "45\u201360 km/h (28\u201337 mph) depending on version"
             },
-            "uuid": "0a707b7f-b7bc-402c-907f-bb68b314f1f6",
+            "uuid": "2b43ec16-f927-4a24-adcd-b262d3c983c6",
             "value": "T-64"
         },
         {
@@ -453,7 +453,7 @@
                     "4 km/h (2.5 mph) (reverse)"
                 ]
             },
-            "uuid": "8841a352-3a84-49eb-b413-06089b633621",
+            "uuid": "a37e8b41-2cb3-4f87-82d4-5d5534db991a",
             "value": "T-72"
         },
         {
@@ -563,7 +563,7 @@
                 ],
                 "Maximum speed ": "80 km/h (50 mph) (T-80U)48 km/h (30 mph) (cross country)"
             },
-            "uuid": "3d77c8d7-8da1-4555-bb47-adb9e7728896",
+            "uuid": "0ffc987a-7d39-452e-9696-137d90df14fd",
             "value": "T-80"
         },
         {
@@ -640,7 +640,7 @@
                 "Operationalrange": "550 km (340 mi) (without fuel drums)",
                 "Maximum speed ": "60 km/h (37 mph) (T-90A and T-90MS)"
             },
-            "uuid": "752046b9-b704-4717-9e80-e87eff319050",
+            "uuid": "f253f2f3-e87b-4bfc-a441-9109537f4917",
             "value": "T-90"
         },
         {
@@ -667,7 +667,7 @@
                     "000 est."
                 ]
             },
-            "uuid": "260a74c4-42b2-4c26-b3d3-61b7a6fe3f1a",
+            "uuid": "80ad92db-265a-4d93-9021-2d6aedf8af48",
             "value": "T-54"
         },
         {
@@ -724,7 +724,7 @@
                 "Operationalrange": "450 km (280 mi) on road (650 km (400 mi) with two 200 L (53 US gal; 44 imp gal) extra fuel tanks)  320 km (200 mi) cross-country (450 km (280 mi) with two 200-liter extra fuel tanks)",
                 "Maximum speed ": "50 km/h (31 mph) (road)  40 km/h (25 mph) (cross country)"
             },
-            "uuid": "6d4663f9-189d-43fd-b46a-b3dff3dc7ded",
+            "uuid": "ef624439-302c-479a-9fc3-457919013a79",
             "value": "T-62"
         },
         {
@@ -791,7 +791,7 @@
                 ],
                 "Maximum speed ": "45\u201360 km/h (28\u201337 mph) depending on version"
             },
-            "uuid": "a3bf29e5-03d4-4ec7-8096-e883246dbb8f",
+            "uuid": "8b89014c-99f6-4bed-a737-cb420fa325e9",
             "value": "T-64"
         },
         {
@@ -921,7 +921,7 @@
                     "4 km/h (2.5 mph) (reverse)"
                 ]
             },
-            "uuid": "4b7d1f01-a78c-4a0b-b660-aec596437765",
+            "uuid": "4ba95a26-bd9e-4ea5-8135-055994351816",
             "value": "T-72"
         },
         {
@@ -1031,7 +1031,7 @@
                 ],
                 "Maximum speed ": "80 km/h (50 mph) (T-80U)48 km/h (30 mph) (cross country)"
             },
-            "uuid": "da1e8cab-e383-4bdf-b79d-17ad2f6ed5b4",
+            "uuid": "22481aac-3ff0-4d0d-bd87-5bbb7ed0adf4",
             "value": "T-80"
         },
         {
@@ -1084,7 +1084,7 @@
                 "Operationalrange": "540 km (340 mi)",
                 "Maximum speed ": "65 km/h (40 mph) \u2013 70 km/h (43 mph)"
             },
-            "uuid": "f4e76c88-7b88-4573-ae30-aa0d911b4204",
+            "uuid": "2e5e8e39-11f9-44af-8648-77583bc902b9",
             "value": "T-84"
         },
         {
@@ -1161,7 +1161,7 @@
                 "Operationalrange": "550 km (340 mi) (without fuel drums)",
                 "Maximum speed ": "60 km/h (37 mph) (T-90A and T-90MS)"
             },
-            "uuid": "45bf5bf0-04b0-44af-a7c9-41912b4bd1f0",
+            "uuid": "e1ef8dbc-d620-493d-adc2-a3921a0596c3",
             "value": "T-90"
         },
         {
@@ -1202,7 +1202,7 @@
                 "Operationalrange": "650 km (700 km with extra fuel tanks)",
                 "Maximum speed ": "60 km/h"
             },
-            "uuid": "ff0ae595-f5f8-4ac9-acf4-c002025d79da",
+            "uuid": "e390d0ca-fd43-4375-ae50-00916dec508a",
             "value": "PT-91 Twardy"
         },
         {
@@ -1259,7 +1259,7 @@
                 ],
                 "Maximum speed ": "65 km/h"
             },
-            "uuid": "4960e923-ee2f-4e94-9209-17d53e37bb62",
+            "uuid": "0e637571-123e-4356-b827-83dfb7a98edd",
             "value": "Kampfpanzer Leopard 1"
         },
         {
@@ -1325,7 +1325,7 @@
                 ],
                 "Maximum speed ": "70 km/h (43 mph)"
             },
-            "uuid": "9736ff61-171d-4dda-a600-88f75407c5fb",
+            "uuid": "197cb76d-3e85-4ed0-9294-bfa1d1877f6c",
             "value": "Leopard 2"
         },
         {
@@ -1423,7 +1423,7 @@
                     "road: 42 mph (67 km/h) (governed);Off-road: 25 mph (40 km/h)"
                 ]
             },
-            "uuid": "6bba42da-5af9-4b02-98c5-b0b1f90a2e0b",
+            "uuid": "a5d0091c-6b7c-4a53-b58f-f817c7fa3547",
             "value": "M1 Abrams"
         },
         {
@@ -1512,7 +1512,7 @@
                     "25 mph (40 km/h) off-road"
                 ]
             },
-            "uuid": "7c4bed38-2664-4ead-9de4-51ac4a24fc53",
+            "uuid": "825a3b1a-828a-470e-8d30-8b6bfcadb660",
             "value": "FV4034 Challenger 2"
         }
     ]

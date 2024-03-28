@@ -1,10 +1,10 @@
-# https://en.wikipedia.org/wiki/List_of_Russo-Ukrainian_War_military_equipment
-# https://en.wikipedia.org/
-# h4 = Tanks
-# h2 =  Forces
+# Script réalisé par ZANNIER Chloé et ZIMMERMANN Julien
+# Réalisé pour l'option "Threat Intelligence" de la formation M2 SIS de l'UFR MIM de Metz
+# Ce script consiste en la réalisation d'une galaxie MISP modélisant l'ensemble de tous les tanks ayant participé à la guerre en Ukraine
+# Nous avons scrapé la page wikipédia https://en.wikipedia.org/wiki/List_of_Russo-Ukrainian_War_military_equipment pour récupérer la liste des tanks
+# Puis nous avons scrapé chaque page wikipédia de chaque tanks pour récupérer les données de sa fiche d'information (l'encadré à droite au début de chaque page wikipédia)
 import os
 import requests
-import scrapy
 import re
 import json
 import uuid
@@ -41,7 +41,7 @@ def getListLinkTank():
                         listTank.append(linkTank)
     return listTank
 
-# Récupération de la liste des utilisateurs pour un tank
+# Récupération de la liste des opérateurs (pays / organisateurs qui sont utilisateurs) pour un tank
 # 2 possibilités pour récupérer la liste : 
 # - Soit la liste est présente dans la page wikipédia du tank (lien interne)
 # - Soit la liste est accessible sur une page wikipédia différente de celle du tank (lien externe)
@@ -84,6 +84,10 @@ def getOperator(link:str, soupList,th_tag):
                                 listPaysOp.append(operator.findChildren('a')[0].text)
     return listPaysOp
 
+# Récupération de la liste des variants de chaque tank
+# CETTE FONCTION N'EST PAS TERMINÉE , NOUS NE RÉCUPÉRONS AUCUN VARIANTS POUR L'INSTANT
+# Il faut faire le même type de traitement qu'avec la fonction getOperator
+# Nous avons repéré qu'il faut faire des distinctions entre les liens internes et les liens externes comme dans la fonction getOperator
 def getVariants(link:str, soupList,th_tag):
     genericLink = "https://en.wikipedia.org/"
     listVariants = []
@@ -114,6 +118,13 @@ def afficheInfosTank(tank):
         print(info," : ",tank[info])
         print("========")
 
+# Affiche sur la console les informations de tous les tanks faisant partie de la liste
+# Les informations du tank sont stockés dans un dictionnaire avec :
+# Clé = Nom / Titre de l'information | Valeur = Valeur de l'information
+def afficheInfosListTank(listTank):
+    for tank in listTank:
+        afficheInfosTank(tank)
+
 # Récupère toutes les informations d'un tank selon sa page wikipédia
 # Les informations récupérées proviennent de la carte d'information à droite de la page
 def getTank(linkTank):
@@ -133,42 +144,53 @@ def getTank(linkTank):
         # On parcourt toutes les balises <th> de la carte d'information du tank
         # Chaque balise <th> contient le titre d'une information
         # Chaque balise <th> possède une balise soeur <td> auquel on va récupérer le texte pour avoir la valeur de l'information
+        # Il faut prévoir tous les cas possibles de formats de données
         for th_tag in th_tags:
             infosTank[th_tag.text] = ""
+            # S'il y a des retours à la ligne dans le texte, on stocke dans une liste chaque lignes composant le texte
             if "\n" in th_tag.find_next_sibling('td').text:
                 listInfos = []
                 infossep = th_tag.find_next_sibling('td').text.split("\n")
                 for eltinfos in infossep:
                     listInfos.append(traitementInfos(eltinfos))
                 infosTank[th_tag.text] = listInfos
+            # S'il y a des virgules dans le texte, on stocke dans une liste chaque morceaux du texte séparé par une virgule
+            # Cela peut paraitre étrange au premier abord, mais nous avons rencontré dans certains cas que dans certaines fiches d'informations,
+            #   certaines informations importantes à visualiser séparemment comme les différents armements étaient juste séparé par une virgule
             elif "," in th_tag.find_next_sibling('td').text:
                 listInfos = []
                 infossep = th_tag.find_next_sibling('td').text.split(",")
                 for eltinfos in infossep:
                     listInfos.append(traitementInfos(eltinfos))
                 infosTank[th_tag.text] = listInfos
+            # S'il y a une liste non ordonnée dans le texte, nous parcourons le texte de chacun des élements de la liste
             elif th_tag.find_next_sibling('td').findChildren('ul'):
                 listInfos = []
                 for eltUL in th_tag.find_next_sibling('td').findChildren('ul'):
                     for eltLI in eltUL.find_all('li'):
                         listInfos.append(traitementInfos(eltLI.text))
                 infosTank[th_tag.text] = listInfos
+            # S'il y a des retours à la ligne dans le texte, on stocke dans une liste chaque lignes composant le texte
             elif "<br/>" in th_tag.find_next_sibling('td').text:
                 listInfos = []
                 infossep = th_tag.find_next_sibling('td').text.split("<br/>")
                 for eltinfos in infossep:
                     listInfos.append(traitementInfos(eltinfos))
                 infosTank[th_tag.text] = listInfos
+            # S'il y a des retours à la ligne dans le texte, on stocke dans une liste chaque lignes composant le texte
             elif "<br>" in th_tag.find_next_sibling('td').text:
                 listInfos = []
                 infossep = th_tag.find_next_sibling('td').text.split("<br>")
                 for eltinfos in infossep:
                     listInfos.append(traitementInfos(eltinfos))
                 infosTank[th_tag.text] = listInfos
+            # Cas spécifique pour récupérer la liste des opérateurs (utilisateurs) d'un tank
             elif "Used" in th_tag.text and "by" in th_tag.text:
                 infosTank[th_tag.text] = getOperator(linkTank,soupList,th_tag)
+            # Cas spécifique pour récupérer les variants d'un tank
             elif "Variants" in th_tag.text:
                 infosTank[th_tag.text] = getVariants(linkTank,soupList,th_tag)
+            # Le cas par défaut si nous ne rentrons pas dans les conditions précédentes
             else:
                 infosTank[th_tag.text] = traitementInfos(th_tag.find_next_sibling('td').text)
         return infosTank
@@ -203,6 +225,7 @@ def CreerGalaxie(nomFichier,description,icon,authors,name,namespace,type,uuid,ve
 # Permet de créer un cluster lié à une Galaxie pour remplir la galaxie de nos données de Tank
 # Les données des Tanks seront lu à partir du fichier de la fonction CreerJSONTanks seront stocké dans la liste de la clé "values" puis dans l'objet ayant la clé "meta"
 # Ce cluster sera stocké dans le dossier "clusters"
+# Les données des tanks viennent du fichier JSON créé avec la fonction CreerJSONTanks
 def CreerCluster(nomFichier,authors,category,name,source,typeCluster,uuidCluster,fichierData):
     chemin_clusters = os.path.join(os.getcwd(), "clusters")
     chemin_clusters_json = os.path.join(chemin_clusters, nomFichier)
@@ -229,19 +252,25 @@ def CreerCluster(nomFichier,authors,category,name,source,typeCluster,uuidCluster
     with open(chemin_clusters_json, 'w') as fichier:
         json.dump(json_clusters, fichier, indent=4)
 
+# Définition d'une fonction main pour une exécution simple de notre script :
+# On récupère dans une liste, la liste de tous les liens wikipédias de chaque tanks ayant participé à la guerre russo-ukrainienne
+# On ajoute dans une seconde liste, tous les dictionnaires de données de chaque tanks
+# On créé le fichier JSON contenant toutes les données des tanks
+# On créé notre galaxie
+# On créé notre cluster et on le remplis avec les données du fichier JSON des tanks
+def main():
+    listTank = []
+    listLinkTank = getListLinkTank()
+    for tankPage in listLinkTank:
+        listTank.append(getTank(tankPage))
+    CreerJSONTanks(listTank,"tanks.json")
+    auteurs = ["ZANNIER Chloé","ZIMMERMANN Julien"]
+    CreerGalaxie("galaxieTanks.json","Une galaxie de tank","Tank",auteurs,"Tanks","Tanks","tanksList",str(uuid.uuid4()),1)
+    CreerCluster("ClusterTanks.json",auteurs,"Tanks","Tanks","https://en.wikipedia.org/wiki/List_of_Russo-Ukrainian_War_military_equipment"
+                 ,"Tanks",str(uuid.uuid4()),"tanks.json")
+    #afficheInfosListTank(listTank)  
 
-#listTank = []
-#listLinkTank = getListLinkTank()
-#for tankPage in listLinkTank:
-    #listTank.append(getTank(tankPage))
-#CreerJSONTanks(listTank,"tanks.json")
-auteurs = ["ZANNIER Chloé","ZIMMERMANN Julien"]
-#CreerGalaxie("galaxieTanks.json","Une galaxie de tank","Tank",auteurs,"Tanks","Tanks","tanksList",str(uuid.uuid4()),1)
-#for tank in listTank:
-    #afficheInfosTank(tank)
-CreerCluster("ClusterTanks.json",auteurs,"Tank","Tank","blabla","Tank",str(uuid.uuid4()),"tanks.json")
-    
-#infosTank = getTank("https://en.wikipedia.org//wiki/T-54/55")
-#infosTank = getTank("https://en.wikipedia.org/wiki/T-90")
-#afficheInfosTank(infosTank)
+if __name__ == "__main__":
+    main()
+
 
