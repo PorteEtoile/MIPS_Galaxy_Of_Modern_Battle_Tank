@@ -51,7 +51,7 @@ Pour scrapper et réaliser notre script, nous avons utilisé les modules python 
 - "requests" pour réaliser des requêtes HTTP sur les pages wikipédia
 - "os" pour la gestion des dossiers et des fichiers
 
-# Axe d'améliorations et réalisations restantes
+# Axes d'améliorations et réalisations restantes
  - Séparation dans deux camps bien distincts les tanks utilisés par l'armée ukrainienne et ceux utilisés par l'armée russe.
  	Actuellement, nous récupérons tous les tanks utilisés pendant la guerre et nous listons seulement les opérateurs au niveau mondial.
 - Correctement clean le parsage des données : Dû à la différence du format de données selon les pages wikipédia, nous avons pas prévu tous les cas possible.
