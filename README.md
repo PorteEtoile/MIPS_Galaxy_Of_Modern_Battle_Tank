@@ -38,8 +38,8 @@ Dans notre fichier "scraping.py" nous avons tout d'abord :
   - Nom du cluster
   - Source du cluster
   - Type du cluster
-	- L'identifiant unique du cluster généré grâce au module "uuid" de python
-	- La liste des données des tanks
+  - L'identifiant unique du cluster généré grâce au module "uuid" de python
+  - La liste des données des tanks
 
 # Références
 Pour scrapper et réaliser notre script, nous avons utilisé les modules python suivants :
@@ -61,3 +61,7 @@ Pour scrapper et réaliser notre script, nous avons utilisé les modules python 
  
 
 Il existe d'autres sites qui référencent les chars par pays, comme [military factory](https://www.militaryfactory.com/).
+
+# Comment lancer le projet
+
+Pour lancer le projet, il suffit d'exécuter avec Python notre script "parsing.py"
